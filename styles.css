@@ -16,3 +16,18 @@
         transition: none;
     }
 }
+
+@media (max-width: 767px) {
+    .landingView {
+        flex-direction: column-reverse; /* Stack sections vertically on smaller screens */
+    }
+
+    .fixed-bottom {
+        flex-direction: column;
+        height: auto; /* Adjust height for better display on smaller screens */
+    }
+
+    .fixed-bottom a {
+        margin: 5px 0; /* Adjust margin for better spacing on smaller screens */
+    }
+}
