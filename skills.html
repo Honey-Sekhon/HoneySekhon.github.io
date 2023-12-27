@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skills</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" />
+</head>
+
+<style>
+    body {
+        background-color: #e0fbfc;
+    }
+
+    td>img {
+        height: 60px;
+        width: 60px;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+        align-items: start;
+        color: #293241;
+        text-decoration: underline;
+    }
+
+    h3 {
+        font-size: medium;
+        font-weight: 700;
+        color: #293241;
+    }
+
+
+    @keyframes flyInFromLeft {
+        from {
+            transform: translateX(-100%);
+            filter: blur(5px);
+            opacity: 0;
+        }
+
+        to {
+            transform: translateX(0);
+            filter: blur(0);
+            opacity: 1;
+        }
+    }
+
+    .fly-in {
+        animation: flyInFromLeft 2s ease forwards;
+    }
+
+    .fly-in::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 90%;
+        height: 90%;
+        background-color: #98c1d9;
+        z-index: -1;
+        box-shadow: 0px 3px 10px rgb(0, 0, 0, 0.6);
+        border-radius: 5px;
+    }
+
+    .table> :not(caption)>*>* {
+        padding: .3rem .3rem;
+        background-color: transparent;
+    }
+
+    .icon-link {
+        text-decoration-color: #293241;
+    }
+</style>
+
+<body>
+
+    <div class="container-fluid text-center">
+        <a class="icon-link icon-link-hover position-absolute top-0 start-0 "
+            style="--bs-icon-link-transform: translate3d(0, -.125rem, 0); font-size: medium; color:#293241;margin: 70px 25px;"
+            href="./index.html">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" class="bi bi-house-fill"
+                viewBox="0 0 16 16">
+                <path
+                    d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L8 2.207l6.646 6.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.707 1.5Z" />
+                <path d="m8 3.293 6 6V13.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5V9.293l6-6Z" />
+            </svg>
+            Home
+        </a>
+        <h1 style="text-align: center; margin: 2rem 0; font-weight: bold; font-size: 5rem ;  color: #293241;">Skills
+        </h1>
+        <div class="table-responsive">
+            <table class="table table-borderless table-sm align-middle table-transparent" style="margin-top:3.5rem ; ">
+                <tbody>
+                    <tr>
+                        <div id="webDev">
+                            <th style=" background-color: transparent;" scope="row">
+                                <h2>Web Development </h2>
+                            </th>
+                            <td class="fly-in" style=" background-color: transparent;">
+                                <img src="./images/html-5_318-566077.avif" alt="">
+                                <h3> HTML </h3>
+                            </td>
+                            <td class="fly-in">
+                                <img src="./images/css_318-698167.avif" alt="">
+                                <h3> CSS </h3>
+                            </td>
+                            <td class="fly-in">
+                                <img src="./images/javaScript.png" alt="">
+                                <h3> JavaScript </h3>
+                            </td>
+                            <td class="fly-in">
+                                <img src="./images/bootstrap.png" alt="">
+                                <h3> Bootstrap</h3>
+                            </td>
+                            <td class="fly-in">
+                                <img src="./images/vaadin.png" alt="">
+                                <h3> Vaadin </h3>
+                            </td>
+                            <td class="fly-in">
+                                <img src="./images/springBoot.png" alt="">
+                                <h3> Springboot</h3>
+                            </td>
+                        </div>
+                    </tr>
+
+                    <tr>
+                    <tr>
+                        <div id="lang">
+                            <th scope="row">
+                                <h2>Languages</h2>
+                            </th>
+                            <td class="fly-in">
+                                <img src="./images/C.png" alt="">
+                                <h3>C</h3>
+                            </td>
+                            <td class="fly-in">
+                                <img src="./images/C++.png" alt="">
+                                <h3>C++</h3>
+                            </td>
+                            <td class="fly-in">
+                                <img src="./images/java.png" alt="">
+                                <h3>JAVA</h3>
+                            </td>
+                            <td class="fly-in">
+                                <img src="./images/python.png" alt="">
+                                <h3>Python</h3>
+                            </td>
+                            <td class="fly-in">
+                                <img src="./images/sql.png" alt="">
+                                <h3>SQL</h3>
+                            </td>
+                            <td class="fly-in">
+                                <img src="./images/matlab.png" alt="">
+                                <h3>MATLAB</h3>
+                            </td>
+                            <td class="fly-in">
+                                <img src="./images/R language.png" alt="">
+                                <h3>R</h3>
+                            </td>
+                        </div>
+                    </tr>
+
+                    <tr>
+                        <div id="tools">
+                            <th scope="row">
+                                <h2>Tools</h2>
+                            </th>
+                            <td class="fly-in">
+                                <img src="./images/vscode.png" alt="">
+                                <h3>VS Code</h3>
+                            </td>
+                            <td class="fly-in">
+                                <img src="./images/gitHub.png" alt="">
+                                <h3>Github</h3>
+                            </td>
+                            <td class="fly-in">
+                                <img src="./images/clion.png" alt="">
+                                <h3>Clion</h3>
+                            </td>
+                            <td class="fly-in">
+                                <img src="./images/intelliJ.png" alt="">
+                                <h3>IntelliJ</h3>
+                            </td>
+                            <td class="fly-in">
+                                <img src="./images/oscilloscope.png" alt="">
+                                <h3>Oscilloscope</h3>
+                            </td>
+                            <td class="fly-in">
+                                <img src="./images/functionGen.png" alt="Function Generator">
+                                <h3>Func. Gen.</h3>
+                            </td>
+                            <td class="fly-in">
+                                <img src="./images/Office.png" alt="MS Office">
+                                <h3>MS Office</h3>
+                            </td>
+                            <!-- <td class="fly-in">
+                                <img src="./images/word.png" alt="">
+                                <h3>Word</h3>
+                            </td>
+                            <td class="fly-in">
+                                <img src="./images/excel.png" alt="">
+                                <h3>Excel</h3>
+                            </td>
+                            <td class="fly-in">
+                                <img src="./images/powerPoint.png" alt="">
+                                <h3>PowerPoint</h3>
+                            </td> -->
+                        </div>
+                    </tr>
+
+                    <tr>
+                        <div id="soft">
+                            <th scope="row">
+                                <h2>Soft-Skills</h2>
+                            </th>
+                            <td class="fly-in">
+                                <img src="./images/teamwork.png" alt="">
+                                <h3>Teamwork</h3>
+                            </td>
+                            <td class="fly-in">
+                                <img src="./images/leadership.png" alt="">
+                                <h3>Leadership</h3>
+                            </td>
+                            <td class="fly-in">
+                                <img src="./images/troubleShooting.png" alt="">
+                                <h3>Troubleshoot</h3>
+                            </td>
+                            <td class="fly-in">
+                                <img src="./images/interPersonal.png" alt="">
+                                <h3>Communication</h3>
+                            </td>
+                            <td class="fly-in">
+                                <img src="./images/timeMan.png" alt="">
+                                <h3 style="margin-bottom: 0;">Time</h3>
+                                <h3 style="padding-top: 0;">Management</h3>
+                            </td>
+                            <td class="fly-in">
+                                <img src="./images/conf.png" alt="">
+                                <h3 style="margin-bottom: 0;">Confidence</h3>
+                            </td>
+                            <td class="fly-in">
+                                <img src="./images/criticalThinking.png" alt="">
+                                <h3 style="margin-bottom: 0;">Critical</h3>
+                                <h3 style="padding-top: 0;">Thinking</h3>
+                            </td>
+                        </div>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+
+</html>

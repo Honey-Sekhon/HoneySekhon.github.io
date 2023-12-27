@@ -1,0 +1,1003 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="./styles.css">
+</head>
+
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        background-color: #c9b1bd;
+    }
+
+    .babyMonitor {
+        height: 100%;
+    }
+
+    .projectHeader {
+        display: flex;
+        column-gap: 1rem;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .projectName {
+        text-align: center;
+        margin: 1rem;
+        padding: 1rem;
+        font-weight: 600;
+        text-decoration: solid;
+        text-decoration: underline;
+        margin: 0;
+    }
+
+    #integration>li {
+        background-color: transparent;
+        border-color: transparent;
+        /* text-align: center; */
+    }
+
+    .groupMembers>ul>li {
+        display: flex;
+        align-items: center;
+        column-gap: 20px;
+        background-color: transparent;
+        /* border-color: rgb(255, 0, 0, 0.2); */
+        border-color: transparent;
+    }
+
+    .groupMembers>ul>li>div {
+        flex: 1;
+    }
+
+    .icon-link {
+        text-decoration-color: #293241;
+    }
+
+    #components>ol>a {
+        background-color: transparent;
+        border-color: transparent;
+        border-radius: 1rem;
+        /* text-align: center; */
+    }
+
+    #components>ol>a:hover {
+        background-color: #D5DFE5;
+        color: rgba(255, 0, 0, 0.407);
+        transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        transform: translate(0, -3px);
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .temp {
+        display: flex;
+        gap: 4rem;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        margin: 2rem 1rem;
+    }
+
+    .proj1 {
+        background-color: #a2d2ff;
+        height: 20rem;
+        width: 20rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-radius: 2rem;
+        padding: 1rem;
+        text-align: center;
+    }
+
+    .proj1:hover {
+        transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        background-color: #FFC8DD;
+        transform: translate(0, -5px);
+        box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.399);
+    }
+
+    .proj1>h3 {
+        font-weight: bold;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    }
+
+    .custom-tooltip {
+        position: absolute;
+        background-color: rgba(0, 0, 0, 0.8);
+        color: white;
+        padding: 10px;
+        border-radius: 5px;
+        width: 200px;
+        z-index: 1000;
+    }
+</style>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg"
+        style="justify-content: center; font-weight: bold; font-size: 3.5rem; background-color: #B49594;">
+        <a class="icon-link icon-link-hover position-absolute top-0 start-0"
+            style="--bs-icon-link-transform: translate3d(0, -.125rem, 0); font-size: medium; color:#293241; margin: 35px 25px;"
+            href="./index.html">
+            <i class="bi bi-house-fill" style="margin-bottom: 5px;"></i>Home
+        </a>
+        Projects
+    </nav>
+
+    <div class="container-fluid" style="margin: 0; padding: 0;">
+        <div class="temp">
+
+            <div class="proj1" data-bs-toggle="modal" data-bs-target="#babyMonitorModal">
+                <h3>BABY MONITOR</h3>
+            </div>
+
+            <div class="proj1" data-bs-toggle="modal" data-bs-target="#pru">
+                <h3>PRU MORSE CODE </h3>
+            </div>
+
+            <div class="proj1" data-bs-toggle="modal" data-bs-target="#beatBox">
+                <h3>BEAT-BOX</h3>
+            </div>
+
+            <div class="proj1" data-bs-toggle="modal" data-bs-target="#lightDip">
+                <h3>LIGHT-DIP ANALYZER</h3>
+            </div>
+
+            <div class="proj1" data-bs-toggle="modal" data-bs-target="#trackour">
+                <h3>TRACKOUR</h3>
+            </div>
+
+            <div class="proj1" data-bs-toggle="modal" data-bs-target="#studentTracker">
+                <h3>STUDENT TRACKER</h3>
+            </div>
+
+            <div class="proj1" data-bs-toggle="modal" data-bs-target="#hist">
+                <h3>HISTOGRAM GENERATOR</h3>
+            </div>
+
+            <div class="proj1" data-bs-toggle="modal" data-bs-target="#portfolio">
+                <h3>PERSONAL PORTFOLIO</h3>
+            </div>
+
+            <div class="proj1" data-bs-toggle="modal" data-bs-target="#db">
+                <h3>ELECTION DATABASE</h3>
+            </div>
+
+            <div class="modal fade" id="babyMonitorModal" data-bs-backdrop="static" data-bs-keyboard="false"
+                tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="staticBackdropLabel">Baby Monitor</h1>
+                            <a class="btn btn-danger" href="https://www.youtube.com/watch?v=5oL96yB7w6E" role="button"
+                                style="opacity: 0.5;" target="_blank">Demo
+                                <i class="bi bi-play-fill"></i>
+                            </a>
+                        </div>
+                        <div class="modal-body">
+                            <p>The Baby Monitor System, a childcare innovation that empowers
+                                caregivers with real-time insights into infants' well-being, even from afar. This system
+                                employs cutting-edge sensors and
+                                intelligent monitoring to ensure utmost vigilance. It features a sensitive motion
+                                detector, a calibrated force sensor for crib presence, and a precision microphone for
+                                capturing sounds. Visual feedback via an LED matrix reassures with smiles or alerts with
+                                frowns, while a user-friendly joystick enables sound adjustments. Powered by BeagleBone
+                                Green, the Baby Monitor seamlessly integrates technology and design to redefine infant
+                                care, fostering trust in distant caregiving.</p>
+                        </div>
+
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Details <i
+                                    class="bi bi-forward-fill"></i></button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal fade" id="pru" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+                aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="staticBackdropLabel">PRU Morse Code</h1>
+                            <a class="btn btn-danger" href="" role="button" style="opacity: 0.5;" target="_blank">Demo
+                                <i class="bi bi-play-fill"></i>
+                            </a>
+                        </div>
+                        <div class="modal-body">
+                            <p>
+                                Programmable Real-Time Units (PRUs), these versatile, microcontroller-like units offer
+                                precision, real-time control over a variety of applications. PRU's capabilities, from
+                                low-level hardware interactions to real-time processing, all in a compact and
+                                energy-efficient package. These units provide a bridge between the software and hardware
+                                worlds, enabling seamless integration with external devices and sensors.
+                            </p>
+                            <p> The intricacies of PRU programming, harnessing their power to perform tasks like
+                                precise sensor interfacing, motor control, and more. Dive deep into the technical
+                                aspects, from assembly-level code to efficient memory management, as PRUs open up a
+                                world of possibilities for embedded systems.
+                            </p>
+                        </div>
+
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <a class="btn btn-primary" href="">Details <i class="bi bi-forward-fill"></i></a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal fade" id="beatBox" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+                aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="staticBackdropLabel">Beat Box </h1>
+                            <a class="btn btn-danger" href="https://www.youtube.com/watch?v=5oL96yB7w6E" role="button"
+                                style="opacity: 0.5;" target="_blank">Demo
+                                <i class="bi bi-play-fill"></i>
+                            </a>
+                        </div>
+                        <div class="modal-body">
+                            <p>
+                                Beat-Box is a sophisticated endeavor in embedded systems, focusing on audio generation
+                                and hardware control. Built on the BeagleBone platform, it transforms this device into a
+                                dynamic digital drum kit. Central to the project is real-time audio generation through
+                                the ALSA API, with multi-threaded execution. </p>
+
+                            <p> Beat-Box offers diverse drum beat modes, customizable sounds, and precise control over
+                                tempo and volume parameters. Hardware components, including a joystick, LED matrix, and
+                                buttons, enhance user interaction. The project prioritizes memory management and
+                                Valgrind analysis for stability. </p>
+
+                            <p> This technical playground invites enthusiasts to explore embedded audio processing,
+                                hardware integration, and real-time optimization. Whether you're a seasoned developer or
+                                a curious learner, Beat-Box presents a captivating journey into the world of embedded
+                                audio systems.
+                            </p>
+                        </div>
+
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Details <i
+                                    class="bi bi-forward-fill"></i></button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal fade" id="lightDip" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+                aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="staticBackdropLabel">Light Dip Analyzer</h1>
+                            <a class="btn btn-danger" href="" role="button" style="opacity: 0.5;" target="_blank">Demo
+                                <i class="bi bi-play-fill"></i>
+                            </a>
+                        </div>
+                        <div class="modal-body">
+                            <p>
+                                This application orchestrates a symphony of tasks—rapid light level sampling, in-depth
+                                statistical analysis, data presentation on an 8x8 LED matrix via joystick inputs, and
+                                responsive handling of user commands. </p>
+
+                            <p>Throughout this expedition, technical nuances are uncovered, encompassing
+                                cross-compilation, debugging methodologies, thread management, GPIO intricacies, and
+                                seamless hardware integration. Fasten your seatbelts as this technical adventure unfolds
+                                into the world of debugging and light sampling!
+                            </p>
+                        </div>
+
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Details <i
+                                    class="bi bi-forward-fill"></i></button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal fade" id="trackour" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+                aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="staticBackdropLabel">Baby Monitor</h1>
+                            <a class="btn btn-danger" href="https://trackour-71740b018a2c.herokuapp.com/?continue"
+                                role="button" style="opacity: 0.5;" target="_blank">Working Demo
+                                <i class="bi bi-play-fill"></i>
+                            </a>
+                        </div>
+                        <div class="modal-body">
+                            <p>Trackour is a web application that assists both beginner and experienced music creators
+                                with planning their mix or mashup projects. Users will be able to search for music
+                                through Trackour using harmonic details of the songs, such as key, tempo, time
+                                signature, etcetera. The search function will give users the option to narrow their
+                                search down to harmonically compatible songs, which will be determined using a system
+                                based on the Camelot Wheel. Additionally, Trackour will provide collaborative
+                                functionality, allowing users to plan, save, and share their mix projects with other
+                                users. Take a look <i class="bi bi-emoji-smile-fill"
+                                    style="color: rgba(255, 255, 0, 0.548);"></i><br>
+                                <b> Username: admin</b><br>
+                                <b>Password: admin123</b>
+                            </p>
+                        </div>
+
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Details <i
+                                    class="bi bi-forward-fill"></i></button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal fade" id="studentTracker" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+                aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="staticBackdropLabel">Student Tracker</h1>
+                            <a class="btn btn-danger" href="https://studentapplication-5yrv.onrender.com/students/view"
+                                role="button" style="opacity: 0.5;" target="_blank">Working Demo
+                                <i class="bi bi-play-fill"></i>
+                            </a>
+                        </div>
+                        <div class="modal-body">
+                            <p>Experience 'StudentTracker,' a dynamic application I developed using the Spring
+                                framework. This project showcases my ability to create, manage, and visualize student
+                                records, offering seamless user interaction through an intuitive web interface. With a
+                                focus on usability and documentation, I demonstrated my skills in Spring development,
+                                user-centric design, and effective content presentation. <br>
+                                <b>Note:<i> This website takes around 7-10 minutes to bootup (Due to <a
+                                            href="https://render.com/" target="_blank"> Render's</a>
+                                        services)</i></b>
+                            </p>
+                        </div>
+
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Details <i
+                                    class="bi bi-forward-fill"></i></button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal fade" id="hist" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+                aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="staticBackdropLabel">Histogram</h1>
+                            <a class="btn btn-danger" href="" role="button" style="opacity: 0.5;" target="_blank">Demo
+                                <i class="bi bi-play-fill"></i>
+                            </a>
+                        </div>
+                        <div class="modal-body">
+                            <p> Histogram Generator is a web-page that gives the count of each student in their grade
+                                categories. This page incorporates input boxes for grades, expertly managed by a
+                                JavaScript file, "calculate.js." Visitors to the website can input new grades, and may
+                                also change the grade boundaries as they wish, histogram dynamically adapts to
+                                illustrate the distribution of students across various grade ranges. To ensure a
+                                seamless user experience, the system gracefully handles invalid inputs, providing
+                                helpful feedback.</p>
+
+                            <ul>
+                                Skills Demonstrated:
+
+                                Proficiency in HTML and CSS for creating visually appealing web pages.
+                                JavaScript expertise for dynamic content manipulation and user interaction.
+                                Skillful use of DOM manipulation for real-time updates to the web page.
+                                Effective handling of user input events, ensuring a seamless user experience.
+                                Expertise in data management through JavaScript arrays for maintaining grade records.
+                                Creative problem-solving to represent student distributions in a unique histogram.
+                                Robust error handling to gracefully manage invalid inputs.
+                                User-centric interface design for an intuitive user experience.
+                                Event-driven programming using JavaScript's event functions.
+                                Rigorous testing and validation to ensure program reliability.
+                                Comprehensive code documentation for clarity and maintainability.
+                            </ul>
+                        </div>
+
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Details <i
+                                    class="bi bi-forward-fill"></i></button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal fade" id="portfolio" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+                aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="staticBackdropLabel">Personal Portfolio</h1>
+                            <a class="btn btn-danger" href="https://www.youtube.com/watch?v=5oL96yB7w6E" role="button"
+                                style="opacity: 0.5;" target="_blank">Demo
+                                <i class="bi bi-play-fill"></i>
+                            </a>
+                        </div>
+                        <div class="modal-body">
+                            <p></p>
+                        </div>
+
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Details <i
+                                    class="bi bi-forward-fill"></i></button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal fade" id="db" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+                aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="staticBackdropLabel">Election Database</h1>
+                            <a class="btn btn-danger" href="" role="button" style="opacity: 0.5;" target="_blank">Demo
+                                <i class="bi bi-play-fill"></i>
+                            </a>
+                        </div>
+                        <div class="modal-body">
+                            <p></p>
+                        </div>
+
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Details <i
+                                    class="bi bi-forward-fill"></i></button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <div class="babyMonitor">
+        <span class="projectHeader parallax-content">
+            <h2 class="projectName">Baby Monitor </h2>
+            <a class="btn btn-danger" href="https://www.youtube.com/watch?v=5oL96yB7w6E" role="button"
+                style="opacity: 0.5;" target="_blank">Working Demo
+                <i class="bi bi-play-fill"></i>
+            </a>
+        </span>
+
+        <div class="container-fluid">
+            <p>The Baby Monitor System, a childcare innovation that empowers caregivers with real-time insights into
+                infants' well-being, even from afar. This system employs cutting-edge sensors and intelligent
+                monitoring to ensure utmost vigilance. It features a sensitive motion
+                detector, a calibrated force sensor for crib presence, and a precision microphone for capturing
+                sounds. Visual feedback via an LED matrix reassures with smiles or alerts with frowns, while a
+                user-friendly joystick enables sound adjustments. Powered by BeagleBone Green, the Baby Monitor
+                seamlessly integrates technology and design to redefine infant care, fostering trust in distant
+                caregiving.</p>
+        </div>
+
+        <div class="container-fluid" style="width: 100%;">
+            <div class="row">
+                <div class="col-5" id="skillSection">
+                    <h3 class="parallax-content" style="text-decoration: underline; text-align: center;">Skills
+                        Employed</h3>
+                    <div class="row">
+                        <div class="col">
+                            <ul>
+                                <li>Cross Compiling and Deployment</li>
+                                <li>Sensor Integration</li>
+                                <li>Circuit Design</li>
+                                <li>Signal Processing</li>
+                                <li>Microcontroller Programming</li>
+                            </ul>
+                        </div>
+                        <div class="col">
+                            <ul>
+                                <li>Hardware Calibration</li>
+                                <li>Data Analysis</li>
+                                <li>Audio Processing</li>
+                                <li>Hardware Integration</li>
+                                <li>Project Management</li>
+                                <li>UI Feedback and Interaction</li>
+                            </ul>
+                        </div>
+                        <div class="col">
+                            <ul>
+                                <li>Collaboration</li>
+                                <li>Adaptability</li>
+                                <li>Critical Thinking</li>
+                                <li>Problem Solving</li>
+                                <li>Attention to Detail</li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="col-5" id="personalContribution" style="padding: 0;">
+                    <h3 class="parallax-content" style=" text-align:center; text-decoration: underline;">
+                        Contribution</h3>
+                    <ul>
+                        <li>Worked extensively on the FSR (Force-Sensitive Resistor) sensor integration,
+                            enabling
+                            the system to detect physical pressure and weight variations in real-time.</li>
+                        <li>Integration and fine-tuning of the electret microphone amplifier (MAX4466), enabling
+                            precise sound capturing and amplification for audio-responsive functionalities.</li>
+                        <li>Configured GCC and toolchain for ARM architecture, enabling precision
+                            cross-compilation for BeagleBone Green</li>
+
+                    </ul>
+                </div>
+                <div class="col" id="devTools">
+                    <h3 class="parallax-content" style=" text-align:center; text-decoration: underline;">Dev.
+                        Tools
+                    </h3>
+                    <ul style="margin-left: 1rem;">
+                        <li>Language: C</li>
+                        <li>IDE: VS Code</li>
+                        <li>OS: Linux</li>
+                        <li>GitHub</li>
+                        <li>ARM GCC Cross Compiler</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-fluid" style="margin: 0;">
+            <div class="row text-center">
+                <div class="col-6" id="components">
+                    <button type="button" class="btn btn-tertiary" data-bs-toggle="tooltip" data-bs-placement="right"
+                        data-bs-title="Components when clicked redirect you to their respective pages">
+                        <h2 class="parallax-content" style="text-decoration: underline;">
+                            Components
+                        </h2>
+                    </button>
+
+                    <ol class="list-group list-group-horizontal">
+                        <a href="https://www.beagleboard.org/boards/seeedstudio-beaglebone-green" target="_blank"
+                            class="list-group-item list-group-item-action">BeagleBone
+                            Green</a>
+                        <a href="https://www.adafruit.com/product/872" target="_blank"
+                            class="list-group-item list-group-item-action">8*8 LED matrix</a>
+                        <a href="https://www.adafruit.com/product/2765" target="_blank"
+                            class="list-group-item list-group-item-action">Joystick</a>
+                    </ol>
+
+                    <ol class="list-group list-group-horizontal">
+                        <a href="https://www.adafruit.com/product/1063" target="_blank"
+                            class="list-group-item list-group-item-action">Electret
+                            Microphone Amplifier</a>
+                        <a href="https://learn.adafruit.com/pir-passive-infrared-proximity-motion-sensor/how-pirs-work"
+                            target="_blank" class="list-group-item list-group-item-action">PIR Sensor (Motion
+                            Detector)</a>
+                        <a href="https://www.adafruit.com/product/1075" target="_blank"
+                            class="list-group-item list-group-item-action">FSR Sensor</a>
+                    </ol>
+                </div>
+
+                <div class="col-6">
+                    <h2 class="parallax-content" style="text-align: center;text-decoration: underline;">Future
+                        Integrations</h2>
+                    <ol class="list-group list-group-horizontal" id="integration">
+                        <li class="list-group-item flex-fill">Integrated Live Camera Feed</li>
+                        <li class="list-group-item flex-fill">Smart Alerts via Messages and Email</li>
+                        <li class="list-group-item flex-fill">Integration with Health Metrics</li>
+                    </ol>
+                    <ol class="list-group list-group-horizontal" id="integration">
+                        <li class="list-group-item flex-fill">Machine Learning for Predictive Insights</li>
+                        <li class="list-group-item flex-fill">Parental User Profiles</li>
+                        <li class="list-group-item flex-fill">Remote Soothing Mechanisms</li>
+                    </ol>
+                </div>
+
+            </div>
+        </div>
+
+        <br>
+
+        <span class="groupMembers">
+            <h3 class="parallax-content" style="text-align: center; text-decoration: underline;">Project
+                Contributers</h3>
+            <ul class="list-group">
+                <li class="list-group-item">Amir Eghbal
+                    <div class="progress" role="progressbar" aria-label="Example with label" aria-valuenow="25"
+                        aria-valuemin="0" aria-valuemax="100">
+                        <div class="progress-bar  bg-warning" style="width: 40%">40%</div>
+                    </div>
+                </li>
+                <li class="list-group-item">Honeypal Sekhon
+                    <div class="progress" role="progressbar" aria-label="Example with label" aria-valuenow="25"
+                        aria-valuemin="0" aria-valuemax="100">
+                        <div class="progress-bar" style="width: 35%">35%</div>
+                    </div>
+                </li>
+                <li class="list-group-item">Navpreet Sidhu
+                    <div class="progress" role="progressbar" aria-label="Example with label" aria-valuenow="25"
+                        aria-valuemin="0" aria-valuemax="100">
+                        <div class="progress-bar bg-danger" style="width: 25%">25%</div>
+                    </div>
+                </li>
+            </ul>
+        </span>
+    </div>
+
+    <!-- *****************************************************Project2************************************************************ -->
+
+    <br>
+    <div class="Trackour">
+        <span class="projectHeader  parallax-content">
+            <h2 class="projectName">Trackour </h2>
+            <a class="btn btn-danger" href="https://trackour-71740b018a2c.herokuapp.com/?continue" role="button"
+                style="opacity: 0.5;" target="_blank">Working Demo
+                <i class="bi bi-play-fill"></i>
+            </a>
+        </span>
+
+        <div class="container-fluid">
+            <p>Trackour is a web application that assists both beginner and experienced music creators with
+                planning their mix or mashup projects. Users will be able to search for music through Trackour using
+                harmonic details of the songs, such as key, tempo, time signature, etcetera. The search function
+                will give users the option to narrow their search down to harmonically compatible songs, which will
+                be determined using a system based on the Camelot Wheel. Additionally, Trackour will provide
+                collaborative functionality, allowing users to plan, save, and share their mix projects with
+                other users. Take a look <i class="bi bi-emoji-smile-fill"
+                    style="color: rgba(255, 255, 0, 0.548);"></i><br>
+                <b> Username: admin</b><br>
+                <b>Password: admin123</b>
+            </p>
+        </div>
+
+        <div class="container-fluid" style="width: 100%;">
+            <div class="row">
+                <div class="col-5" id="skillSection" style="padding-right: 0;">
+                    <h3 class="parallax-content" style="text-decoration: underline; text-align: center;">Skills
+                        Employed</h3>
+                    <div class="row">
+                        <div class="col">
+                            <ul>
+                                <li>Web Application Development</li>
+                                <li>User Authentication and Security</li>
+                                <li>Quality Assurance and Testing</li>
+                                <li>Collaboration Functionality</li>
+                                <li>User Experience (UX) Design</li>
+                                <li>API Integration</li>
+                            </ul>
+                        </div>
+                        <div class="col">
+                            <ul>
+                                <li>Front-End Development</li>
+                                <li>Database Management</li>
+                                <li>Agile Development</li>
+                                <li>Spotify Integration</li>
+                                <li>User Account Management</li>
+                                <li>Troubleshooting and Debugging</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-4" id="personalContribution" style="padding: 0;">
+                    <h3 class="parallax-content" style=" text-align:center; text-decoration: underline;">
+                        Contribution</h3>
+                    <ul style="padding: 0;">
+                        <li>Developed the Explore page, allowing users to choose moods/genres and display relevant
+                            playlists.</li>
+                        <li>Designed the Home page, featuring a section with the 8 newest songs/albums/singles,
+                            linked to Spotify for playback.</li>
+                        <li>Utilized Spotify API with the client credentials method to fetch data for both Explore
+                            and Home pages.</li>
+                        <li>Created API controller classes, showcasing skills in API integration, authentication,
+                            and user interface design.</li>
+                    </ul>
+
+                </div>
+                <div class="col-3" id="devTools">
+                    <h3 class="parallax-content" style=" text-align:center; text-decoration: underline;">Dev.
+                        Tools
+                    </h3>
+                    <div class="row">
+                        <div class="col">
+                            <ul>
+                                <li>Languages:
+                                    <ul>
+                                        <li>JAVA</li>
+                                        <li>HTML</li>
+                                        <li>CSS</li>
+                                        <li>Javascript</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col">
+                            <ul>
+                                <li>IDE: VS Code</li>
+                                <li>GitHub</li>
+                                <li>Trello</li>
+                                <li>OS: Windows</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-fluid" style="margin: 0;">
+            <div class="row text-center">
+                <div class="col-6" id="components">
+                    <button type="button" class="btn btn-tertiary" data-bs-toggle="tooltip" data-bs-placement="right"
+                        data-bs-title="Components when clicked redirect you to their respective pages">
+                        <h2 class="parallax-content" style="text-decoration: underline;">
+                            Components
+                        </h2>
+                    </button>
+
+                    <ol class="list-group list-group-horizontal">
+                        <a href="https://www.postgresql.org/" target="_blank"
+                            class="list-group-item list-group-item-action">PostgreSQL</a>
+                        <a href="https://vaadin.com/docs/latest/" target="_blank"
+                            class="list-group-item list-group-item-action">Vaadin</a>
+                        <a href="https://spring.io/projects/spring-boot" target="_blank"
+                            class="list-group-item list-group-item-action">Springboot</a>
+                        <a href="https://developer.spotify.com/documentation/web-api" target="_blank"
+                            class="list-group-item list-group-item-action">SpotifyAPI</a>
+                    </ol>
+                </div>
+
+                <div class="col-6">
+                    <h2 class="parallax-content"
+                        style="text-align: center;text-decoration: underline; margin-bottom: 18px;">Future
+                        Integrations</h2>
+                    <ol class="list-group list-group-horizontal" id="integration">
+
+                        <li class="list-group-item flex-fill">Embedding a Player</li>
+                        <li class="list-group-item flex-fill">Login via Spotify, Google,etc.</li>
+                        <li class="list-group-item flex-fill">Integration of more tools for editing</li>
+                    </ol>
+                </div>
+
+            </div>
+        </div>
+
+        <br>
+
+        <span class="groupMembers">
+            <h3 class="parallax-content" style="text-align: center; text-decoration: underline;">Project
+                Contributers</h3>
+            <ul class="list-group">
+                <li class="list-group-item">Honeypal Sekhon
+                    <div class="progress" role="progressbar" aria-label="Example with label" aria-valuenow="25"
+                        aria-valuemin="0" aria-valuemax="100">
+                        <div class="progress-bar" style="width: 35%">25%</div>
+                    </div>
+                </li>
+                <li class="list-group-item">Navpreet Sidhu
+                    <div class="progress" role="progressbar" aria-label="Example with label" aria-valuenow="25"
+                        aria-valuemin="0" aria-valuemax="100">
+                        <div class="progress-bar bg-danger" style="width: 20%">20%</div>
+                    </div>
+                </li>
+                <li class="list-group-item">Tallal Gohar
+                    <div class="progress" role="progressbar" aria-label="Example with label" aria-valuenow="25"
+                        aria-valuemin="0" aria-valuemax="100">
+                        <div class="progress-bar bg-danger" style="width: 15%">15%</div>
+                    </div>
+                </li>
+                <li class="list-group-item">Derek Okpala
+                    <div class="progress" role="progressbar" aria-label="Example with label" aria-valuenow="25"
+                        aria-valuemin="0" aria-valuemax="100">
+                        <div class="progress-bar bg-danger" style="width: 20%">20%</div>
+                    </div>
+                </li>
+                <li class="list-group-item">Ella Green
+                    <div class="progress" role="progressbar" aria-label="Example with label" aria-valuenow="25"
+                        aria-valuemin="0" aria-valuemax="100">
+                        <div class="progress-bar bg-danger" style="width: 25%">20%</div>
+                    </div>
+                </li>
+            </ul>
+        </span>
+    </div>
+
+    <!-- *****************************************************Project3************************************************************ -->
+
+    <div class="parallax-content">
+        <div class="StudentTracker parallax-content" style="background-color: aqua;">
+            <span class="projectHeader  parallax-content">
+                <h2 class="projectName">Student Tracker</h2>
+                <a class="btn btn-danger" href="https://studentapplication-5yrv.onrender.com/students/view"
+                    role="button" style="opacity: 0.5;" target="_blank">Working Demo
+                    <i class="bi bi-play-fill"></i>
+                </a>
+            </span>
+
+            <div class="container-fluid">
+                <p>Experience 'StudentTracker,' a dynamic application I developed using the Spring framework. This
+                    project showcases my ability to create, manage, and visualize student records, offering seamless
+                    user interaction through an intuitive web interface. With a focus on usability and
+                    documentation, I
+                    demonstrated my skills in Spring development, user-centric design, and effective content
+                    presentation. <br>
+                    <b>Note:<i> This website takes around 7-10 minutes to bootup (Due to <a href="https://render.com/"
+                                target="_blank"> Render's</a>
+                            services)</i></b>
+                </p>
+            </div>
+
+            <div class="container-fluid" style="width: 100%;;">
+                <div class="row">
+                    <div class="col-9" id="skillSection" style="padding-right: 0;">
+                        <h3 class="parallax-content" style="text-decoration: underline; text-align: center;">Skills
+                            Employed</h3>
+                        <div class="row">
+                            <div class="col">
+                                <ul>
+                                    <li>Database Design and Management:
+                                        <ul>
+                                            <li>Created the "Student" database table with attributes like name,
+                                                weight,
+                                                height, hair color, and GPA.</li>
+                                        </ul>
+                                    </li>
+                                    <li>Spring Application Development:
+                                        <ul>
+                                            <li>Developed the complete Spring application, including backend logic
+                                                and
+                                                frontend interfaces.</li>
+                                            <li>Implemented endpoints for adding, modifying, and deleting student
+                                                records.</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col">
+                                <ul>
+                                    <li>User Interaction and Forms:
+                                        <ul>
+                                            <li>Implemented user interactions through forms for adding and modifying
+                                                student attributes.</li>
+                                            <li>Pre-filled form fields with existing student data for easy
+                                                modification.
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>Usability and Creativity:
+                                        <ul>
+                                            <li>Designed intuitive interfaces for CRUD operations, focusing on
+                                                user-friendly experience.</li>
+                                            <li>Demonstrated creativity in UI design, combining aesthetics and
+                                                usability.</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col">
+                                <ul>
+                                    <li>Web Development:
+                                        <ul>
+                                            <li>Built web pages visualizing students as rectangles using HTML and
+                                                CSS.
+                                            </li>
+                                            <li>Designed the layout for displaying student information.</li>
+                                        </ul>
+                                    </li>
+                                    <li>User Interface Design:
+                                        <ul>
+                                            <li>Designed intuitive user interfaces for adding, modifying, and
+                                                deleting
+                                                students.</li>
+                                            <li>Created forms to input and update student attributes.</li>
+                                        </ul>
+                                    </li>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col-3" id="devTools">
+                        <h3 class="parallax-content" style=" text-align:center; text-decoration: underline;">Dev.
+                            Tools
+                        </h3>
+                        <div class="row">
+                            <div class="col">
+                                <ul>
+                                    <li>Languages:
+                                        <ul>
+                                            <li>JAVA</li>
+                                            <li>HTML</li>
+                                            <li>CSS</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col">
+                                <ul>
+                                    <li>IDE: VS Code</li>
+                                    <li>GitHub</li>
+                                    <li>OS: Windows</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="row text-center">
+                            <div class="col" id="components">
+                                <button type="button" class="btn btn-tertiary" data-bs-toggle="tooltip"
+                                    data-bs-placement="right"
+                                    data-bs-title="Components when clicked redirect you to their respective pages">
+                                    <h2 class="parallax-content" style="text-decoration: underline;">
+                                        Components
+                                    </h2>
+                                </button>
+
+                                <ol class="list-group list-group-horizontal">
+                                    <a href="https://www.postgresql.org/" target="_blank"
+                                        class="list-group-item list-group-item-action">PostgreSQL</a>
+                                    <a href="https://getbootstrap.com/docs/5.3/getting-started/introduction/"
+                                        target="_blank" class="list-group-item list-group-item-action">Bootstrap</a>
+                                    <a href="https://spring.io/projects/spring-boot" target="_blank"
+                                        class="list-group-item list-group-item-action">Springboot</a>
+                                </ol>
+                            </div>
+                        </div>
+
+                        <!-- <br> -->
+                        <span class="groupMembers">
+                            <h3 class="parallax-content" style="text-align: center; text-decoration: underline;">
+                                Project
+                                Contributers</h3>
+                            <ul class="list-group">
+                                <li class="list-group-item">Honeypal Sekhon
+                                    <div class="progress" role="progressbar" aria-label="Example with label"
+                                        aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+                                        <div class="progress-bar" style="width: 100%">100%</div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </span>
+                    </div>
+                </div>
+                <br>
+            </div>
+        </div>
+    </div>
+
+    <script defer src="./effect.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+
+
+
+</html>
