@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Histogram Generator</title>
+    <link rel="stylesheet" href="./histogram.css">
+    <script src="./calculate.js" defer></script>
+</head>
+
+<body>
+    <main>
+        <section class="container">
+            <section class="leftColumn">
+                <header>
+                    Lower Bounds
+                </header>
+
+                <ul class="Grades">
+                    <li>
+                        <span class="Grade">Max</span>
+                        <input type="text" class="GradeLimit" value="100.00" id="max">
+                    </li>
+
+                    <li>
+                        <span class="Grade">A+</span>
+                        <input type="text" class="GradeLimit" value="95.00" id="A+">
+                    </li>
+
+                    <li>
+                        <span class="Grade">A</span>
+                        <input type="text" class="GradeLimit" value="90.00" id="A">
+                    </li>
+
+                    <li>
+                        <span class="Grade">A-</span>
+                        <input type="text" class="GradeLimit" value="85.00" id="A-">
+                    </li>
+
+                    <li>
+                        <span class="Grade">B+</span>
+                        <input type="text" class="GradeLimit" value="80.00" id="B+">
+                    </li>
+
+                    <li>
+                        <span class="Grade">B</span>
+                        <input type="text" class="GradeLimit" value="75.00" id="B">
+                    </li>
+
+                    <li>
+                        <span class="Grade">B-</span>
+                        <input type="text" class="GradeLimit" value="70.00" id="B-">
+                    </li>
+
+                    <li>
+                        <span class="Grade">C+</span>
+                        <input type="text" class="GradeLimit" value="65.00" id="C+">
+                    </li>
+
+                    <li>
+                        <span class="Grade">C</span>
+                        <input type="text" class="GradeLimit" value="60.00" id="C">
+                    </li>
+
+                    <li>
+                        <span class="Grade">C-</span>
+                        <input type="text" class="GradeLimit" value="55.00" id="C-">
+                    </li>
+
+                    <li>
+                        <span class="Grade">D</span>
+                        <input type="text" class="GradeLimit" value="50.00" id="D">
+                    </li>
+
+                    <li>
+                        <span class="Grade">F</span>
+                        <input type="text" class="GradeLimit" value="0.00" id="F">
+                    </li>
+                </ul>
+
+            </section>
+
+            <section class="rightColumn">
+                <section class="upperColumn">
+                    <header> Histogram </header>
+                    <ul class="HistogramGrades">
+                        <li>
+                            <div class="GradeContainer">
+                                <span class="GradeCount">A+</span>
+                                <span class="Count" id="countA+">0</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="GradeContainer">
+                                <span class="GradeCount">A</span>
+                                <span class="Count" id="countA">0</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="GradeContainer">
+                                <span class="GradeCount">A-</span>
+                                <span class="Count" id="countA-">0</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="GradeContainer">
+                                <span class="GradeCount">B+</span>
+                                <span class="Count" id="countB+">0</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="GradeContainer">
+                                <span class="GradeCount">B</span>
+                                <span class="Count" id="countB">0</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="GradeContainer">
+                                <span class="GradeCount">B-</span>
+                                <span class="Count" id="countB-">0</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="GradeContainer">
+                                <span class="GradeCount">C+</span>
+                                <span class="Count" id="countC+">0</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="GradeContainer">
+                                <span class="GradeCount">C</span>
+                                <span class="Count" id="countC">0</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="GradeContainer">
+                                <span class="GradeCount">C-</span>
+                                <span class="Count" id="countC-">0</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="GradeContainer">
+                                <span class="GradeCount">D</span>
+                                <span class="Count" id="countD">0</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="GradeContainer">
+                                <span class="GradeCount">F</span>
+                                <span class="Count" id="countF">0</span>
+                            </div>
+                        </li>
+
+                </section>
+
+                <section class="lowerColumn">
+                    <form id="inputGrade"> New Grade:
+                        <input name="iGrade" id="newGrade" type="text">
+                    </form>
+                </section>
+
+            </section>
+        </section>
+
+    </main>
+</body>
+
+</html>

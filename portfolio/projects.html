@@ -1,0 +1,1730 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link href="https://unpkg.com/@popperjs/core@2">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="./styles.css">
+</head>
+
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        background-color: #c9b1bd;
+    }
+
+    .babyMonitor {
+        height: 100%;
+    }
+
+    .projectHeader {
+        display: flex;
+        column-gap: 1rem;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .projectName {
+        text-align: center;
+        margin: 1rem;
+        padding: 1rem;
+        font-weight: 600;
+        text-decoration: solid;
+        text-decoration: underline;
+        margin: 0;
+    }
+
+    #integration>li {
+        background-color: transparent;
+        border-color: transparent;
+        /* text-align: center; */
+    }
+
+    .groupMembers>ul>li {
+        display: flex;
+        align-items: center;
+        column-gap: 20px;
+        background-color: transparent;
+        /* border-color: rgb(255, 0, 0, 0.2); */
+        border-color: transparent;
+    }
+
+    .groupMembers>ul>li>div {
+        flex: 1;
+    }
+
+    .icon-link {
+        text-decoration-color: #293241;
+    }
+
+    #components {
+        gap: 1rem;
+        align-content: center;
+    }
+
+    #components>div>a {
+        text-decoration: none;
+        color: black;
+
+    }
+
+    #components>div {
+        background-color: lightsteelblue;
+        border-color: darkslategray;
+        border-radius: 0.8rem;
+        border-style: double;
+    }
+
+    #components>div:hover {
+        background-color: #D5DFE5;
+        color: rgba(255, 0, 0, 0.407);
+        transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        transform: translate(0, -3px);
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .temp {
+        display: flex;
+        gap: 2rem;
+        /* justify-content: space-evenly; */
+        align-content: start;
+        flex-wrap: wrap;
+        margin: 2rem;
+        margin-right: 0rem;
+    }
+
+    .proj1 {
+        background-color: #a2d2ff;
+        height: 12rem;
+        width: 12rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-radius: 1.25rem;
+        padding: 1rem;
+        text-align: center;
+    }
+
+    .proj1:hover {
+        transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        background-color: #FFC8DD;
+        transform: translate(0, -5px);
+        box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.399);
+    }
+
+    .proj1>h3 {
+        font-weight: 500;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    }
+
+    .custom-tooltip {
+        position: absolute;
+        background-color: rgba(0, 0, 0, 0.8);
+        color: white;
+        padding: 10px;
+        border-radius: 5px;
+        width: 200px;
+        z-index: 1000;
+    }
+
+    #detailCollapsor {
+        width: 100%;
+        text-align: center;
+    }
+
+    #detailCollapsor button {
+        margin: 2.5px;
+    }
+
+    .custom-tooltip {
+        z-index: 1060;
+        --bs-tooltip-bg: #800080;
+        --bs-tooltip-color: white;
+        background: none;
+    }
+
+
+
+    @media (max-width: 498px) {
+        .proj1 {
+            height: 6rem;
+            width: 6rem;
+        }
+
+        .proj1>h3 {
+            font-size: x-small;
+        }
+
+        .icon-link.icon-link-hover.position-absolute.top-0.start-0 {
+            display: none;
+        }
+    }
+</style>
+
+
+<body>
+
+    <nav class="navbar navbar-expand-lg"
+        style="justify-content: center; font-weight: bold; font-size: 3.5rem; background-color: #B49594;">
+        <a class="icon-link icon-link-hover position-absolute top-0 start-0"
+            style="--bs-icon-link-transform: translate3d(0, -.125rem, 0); font-size: medium; color:#293241; margin: 35px 25px;"
+            href="./index.html">
+            <i class="bi bi-house-fill" style="margin-bottom: 5px;"></i>Home
+        </a>
+        Projects
+    </nav>
+
+    <div class="container-fluid" style="margin: 0; padding: 0;">
+        <div class="temp">
+
+            <div class="proj1" data-bs-toggle="modal" data-bs-target="#babyMonitorModal">
+                <h3>BABY MONITOR</h3>
+            </div>
+
+            <div class="proj1" data-bs-toggle="modal" data-bs-target="#pru">
+                <h3>PRU MORSE CODE </h3>
+            </div>
+
+            <div class="proj1" data-bs-toggle="modal" data-bs-target="#beatBox">
+                <h3>BEAT-BOX</h3>
+            </div>
+
+            <div class="proj1" data-bs-toggle="modal" data-bs-target="#lightDip">
+                <h3>LIGHT-DIP ANALYZER</h3>
+            </div>
+
+            <div class="proj1" data-bs-toggle="modal" data-bs-target="#trackour">
+                <h3>TRACKOUR</h3>
+            </div>
+
+            <div class="proj1" data-bs-toggle="modal" data-bs-target="#studentTracker">
+                <h3>STUDENT TRACKER</h3>
+            </div>
+
+            <div class="proj1" data-bs-toggle="modal" data-bs-target="#hist">
+                <h3>HISTOGRAM GENERATOR</h3>
+            </div>
+
+            <div class="proj1" data-bs-toggle="modal" data-bs-target="#portfolio">
+                <h3>PERSONAL PORTFOLIO</h3>
+            </div>
+
+            <!-- <div class="proj1" data-bs-toggle="modal" data-bs-target="#db">
+                <h3>ELECTION DATABASE</h3>
+            </div> -->
+        </div>
+
+        <div class="modal fade" id="babyMonitorModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+            aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="staticBackdropLabel">Baby Monitor</h1>
+                        <a class="btn btn-danger" href="https://www.youtube.com/watch?v=5oL96yB7w6E" role="button"
+                            style="opacity: 0.5;" target="_blank">Demo
+                            <i class="bi bi-play-fill"></i>
+                        </a>
+                    </div>
+                    <div class="modal-body">
+                        <p>The Baby Monitor System, a childcare innovation that empowers
+                            caregivers with real-time insights into infants' well-being, even from afar. This system
+                            employs cutting-edge sensors and
+                            intelligent monitoring to ensure utmost vigilance. It features a sensitive motion
+                            detector, a calibrated force sensor for crib presence, and a precision microphone for
+                            capturing sounds. Visual feedback via an LED matrix reassures with smiles or alerts with
+                            frowns, while a user-friendly joystick enables sound adjustments. Powered by BeagleBone
+                            Green, the Baby Monitor seamlessly integrates technology and design to redefine infant
+                            care, fostering trust in distant caregiving.</p>
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+
+
+                        <button class="btn btn-primary" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#detailCollapsor" aria-expanded="false"
+                            aria-controls="collapseWidthExample">
+                            Details <i class="bi bi-forward-fill"></i>
+                        </button>
+
+
+                        <div class="collapse " id="detailCollapsor">
+                            <button class="btn btn-danger" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#detailButton1" aria-expanded="false"
+                                aria-controls="multiCollapseExample2">Skills Honed</button>
+                            <button class="btn btn-danger" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#detailButton2" aria-expanded="false"
+                                aria-controls="multiCollapseExample2">Components</button>
+                            <button class="btn btn-danger" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#detailButton3" aria-expanded="false"
+                                aria-controls="multiCollapseExample2">Dev Tools</button>
+                        </div>
+
+                        <div class="collapse multi-collapse" id="detailButton1">
+                            <div class="card card-body">
+                                <div class="container text-center">
+                                    <div class="row">
+                                        <h4 class="skills" style="text-align: center;  text-decoration: underline">
+                                            Technical</h4>
+                                        <div class="col-sm">
+                                            <img width="20" height="20"
+                                                src="https://img.icons8.com/ios-filled/50/motion-detector.png"
+                                                alt="motion-detector" />
+                                            <p>Sensor Integration</p>
+                                        </div>
+                                        <div class="col-sm"><i class="bi bi-clipboard2-pulse-fill"></i>
+                                            <p>Signal Processing</p>
+                                        </div>
+                                        <div class="col-sm">
+                                            <img width="20" height="20"
+                                                src="https://img.icons8.com/ios-filled/50/network-gateway.png"
+                                                alt="network-gateway" />
+                                            <p>Hardware Calibration</p>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm">
+                                            <i class="bi bi-clipboard-data-fill"></i>
+                                            <p>Data Analysis</p>
+                                        </div>
+                                        <div class="col-sm">
+                                            <i class="bi bi-soundwave"></i>
+                                            <p>Audio Processing</p>
+                                        </div>
+                                        <div class="col-sm">
+                                            <i class="bi bi-building-check"></i>
+                                            <p>Hardware Integration</p>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm">
+                                            <i class="bi bi-calendar3"></i>
+                                            <p>Project Management</p>
+                                        </div>
+                                        <div class="col-sm"><i class="bi bi-pci-card"></i>
+                                            <p>Microcontroller Programming</p>
+                                        </div>
+                                        <div class="col-sm"><i class="bi bi-person-badge"></i>
+                                            <p>UI Feedback and Interaction</p>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm"><i class="bi bi-file-code-fill"></i>
+                                            <p>Cross Compiling and Deployment</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="col">
+                                        <h4 class="skills" style="text-align: center; text-decoration: underline;">
+                                            Soft</h4>
+                                        <div class="row">
+                                            <div class="col-sm"><i class="bi bi-people-fill"></i>
+                                                <p>Collaboration</p>
+                                            </div>
+                                            <div class="col-sm"><i class="bi bi-android"></i>
+                                                <p>Adaptability</p>
+                                            </div>
+                                            <div class="col-sm"><img width="20" height="20"
+                                                    src="https://img.icons8.com/ios-filled/50/brain.png" alt="brain" />
+                                                <p>Critical Thinking</p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-sm">
+                                                <i class="bi bi-lightbulb-fill"></i>
+                                                <p>Problem Solving</p>
+                                            </div>
+                                            <div class="col-sm">
+                                                <i class="bi bi-card-checklist"></i>
+                                                <p>Attention to Detail</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="collapse multi-collapse" id="detailButton2">
+                            <div class="card card-body">
+                                <div class="container text-center">
+                                    <div class="row" id="components">
+
+                                        <div class="col-sm">
+                                            <a href="https://www.adafruit.com/product/1075" target="_blank">
+                                                FSR Sensor</a>
+                                        </div>
+
+                                        <div class="col-sm">
+                                            <a href="https://www.adafruit.com/product/872" target="_blank">
+                                                8*8 LED matrix</a>
+                                        </div>
+                                        <div class="col-sm">
+                                            <a href="https://www.adafruit.com/product/2765" target="_blank">Joystick</a>
+                                        </div>
+                                        <div class="col-sm">
+                                            <a href="https://learn.adafruit.com/pir-passive-infrared-proximity-motion-sensor/how-pirs-work"
+                                                target="_blank">PIR Sensor</a>
+                                        </div>
+
+                                        <div class="col-sm">
+                                            <a href="https://www.beagleboard.org/boards/seeedstudio-beaglebone-green"
+                                                type="button" target="_blank">BeagleBone Green</a>
+                                        </div>
+
+                                        <div class="col-sm">
+                                            <a href="https://www.adafruit.com/product/1063" target="_blank">
+                                                Electret Microphone</a>
+                                        </div>
+
+                                        <div class="col-sm">
+                                            <a href="https://www.adafruit.com/product/1009" target="_blank">
+                                                Buttons</a>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="collapse multi-collapse" id="detailButton3">
+                            <div class="card card-body">
+                                <div class="container text-center">
+                                    <div class="row">
+                                        <div class="col-sm">
+                                            <img src="./images/C.png" style="height: 32px; width: 32px;"
+                                                alt="C language">
+                                            <p>C</p>
+                                        </div>
+                                        <div class="col-sm">
+                                            <img src="./images/vscode.png" style="height: 32px; width: 32px;"
+                                                alt="VSCode">
+                                            <p>VS Code</p>
+                                        </div>
+                                        <div class="col-sm">
+                                            <img src="./images/linux.png" style="height: 32px; width: 32px;" alt="">
+                                            <p>Linux</p>
+                                        </div>
+
+                                        <div class="col-sm">
+                                            <img src="./images/gitHub.png" style="height: 32px; width: 32px;" alt="">
+                                            <p>GitHub</p>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-sm">
+                                                <img width="32" height="32"
+                                                    src="https://img.icons8.com/external-solidglyph-m-oki-orlando/32/external-compiler-programming-solid-solidglyph-m-oki-orlando.png"
+                                                    alt="external-compiler-programming-solid-solidglyph-m-oki-orlando" />
+                                                <p>ARM GCC Cross Compiler</p>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="modal fade" id="pru" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+            aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="staticBackdropLabel">PRU Morse Code</h1>
+                        <a class="btn btn-danger" href="#" role="button" style="opacity: 0.5;" data-bs-toggle="tooltip"
+                            data-bs-placement="bottom" data-bs-custom-class="custom-tooltip"
+                            data-bs-title="Coming Soon.....">Demo
+                            <i class="bi bi-play-fill"></i>
+                        </a>
+                    </div>
+                    <div class="modal-body">
+                        <p>
+                            Programmable Real-Time Units (PRUs), these versatile, microcontroller-like units offer
+                            precision, real-time control over a variety of applications. PRU's capabilities, from
+                            low-level hardware interactions to real-time processing, all in a compact and
+                            energy-efficient package. These units provide a bridge between the software and hardware
+                            worlds, enabling seamless integration with external devices and sensors.
+                        </p>
+                        <p> The intricacies of PRU programming, harnessing their power to perform tasks like
+                            precise sensor interfacing, motor control, and more. Dive deep into the technical
+                            aspects, from assembly-level code to efficient memory management, as PRUs open up a
+                            world of possibilities for embedded systems.
+                        </p>
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+
+
+                        <button class="btn btn-primary" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#detailCollapsor" aria-expanded="false"
+                            aria-controls="collapseWidthExample">
+                            Details <i class="bi bi-forward-fill"></i>
+                        </button>
+
+
+                        <div class="collapse " id="detailCollapsor">
+                            <button class="btn btn-danger" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#detailButton1" aria-expanded="false"
+                                aria-controls="multiCollapseExample2">Skills Honed</button>
+                            <button class="btn btn-danger" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#detailButton2" aria-expanded="false"
+                                aria-controls="multiCollapseExample2">Components</button>
+                            <button class="btn btn-danger" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#detailButton3" aria-expanded="false"
+                                aria-controls="multiCollapseExample2">Dev Tools</button>
+                        </div>
+
+                        <div class="collapse multi-collapse" id="detailButton1">
+                            <div class="card card-body">
+                                <div class="container text-center">
+                                    <div class="row">
+                                        <h4 class="skills" style="text-align: center;  text-decoration: underline">
+                                            Technical</h4>
+
+
+                                        <div class="col-sm">
+                                            <i class="bi bi-square-fill"></i>
+                                            <p>Button Integration</p>
+                                        </div>
+                                        <div class="col-sm">
+                                            <i class="bi bi-lamp-fill"></i>
+                                            <p>LED Light Integration</p>
+                                        </div>
+                                        <div class="col-sm">
+                                            <i class="bi bi-fullscreen"></i>
+                                            <p>LED Matrix Integration</p>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm">
+                                            <i class="bi bi-activity"></i>
+                                            <p>PRU Programming</p>
+                                        </div>
+                                        <div class="col-sm">
+                                            <i class="bi bi-chat-square-quote"></i>
+                                            <p>Interprocess Communication</p>
+                                        </div>
+                                        <div class="col-sm">
+                                            <i class="bi bi-clock-history"></i>
+                                            <p>Real-Time Data Analysis</p>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm">
+                                            <i class="bi bi-bug-fill"></i>
+                                            <p>Cross Debugging</p>
+                                        </div>
+
+                                        <div class="col-sm">
+                                            <i class="bi bi-memory"></i>
+                                            <p>Memory Management</p>
+                                        </div>
+                                        <div class="col-sm">
+                                            <i class="bi bi-bag-check-fill"></i>
+                                            <p>Testing & Validation</p>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <h4 class="skills" style="text-align: center; text-decoration: underline;">
+                                            Soft</h4>
+                                        <div class="row">
+                                            <div class="col-sm"><i class="bi bi-people-fill"></i>
+                                                <p>Collaboration</p>
+                                            </div>
+                                            <div class="col-sm"><i class="bi bi-android"></i>
+                                                <p>Adaptability</p>
+                                            </div>
+                                            <div class="col-sm"><img width="20" height="20"
+                                                    src="https://img.icons8.com/ios-filled/50/brain.png" alt="brain" />
+                                                <p>Critical Thinking</p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-sm">
+                                                <i class="bi bi-lightbulb-fill"></i>
+                                                <p>Problem Solving</p>
+                                            </div>
+                                            <div class="col-sm">
+                                                <i class="bi bi-card-checklist"></i>
+                                                <p>Attention to Detail</p>
+                                            </div>
+                                            <div class="col-sm">
+                                                <i class="bi bi-clock-fill"></i>
+                                                <p>Time Management</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="collapse multi-collapse" id="detailButton2">
+                            <div class="card card-body">
+                                <div class="container text-center">
+                                    <div class="row" id="components">
+                                        <div class="col-sm">
+                                            <a href="https://www.adafruit.com/product/1009" target="_blank">
+                                                Buttons</a>
+                                        </div>
+                                        <div class="col-sm">
+                                            <a href="https://www.adafruit.com/product/872" target="_blank">
+                                                8*8 LED matrix</a>
+                                        </div>
+                                        <div class="col-sm">
+                                            <a href="https://www.beagleboard.org/boards/seeedstudio-beaglebone-green"
+                                                type="button" target="_blank">BeagleBone Green</a>
+                                        </div>
+                                        <div class="col-sm">
+                                            <a href="https://www.adafruit.com/product/754" target="_blank">
+                                                LED</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="collapse multi-collapse" id="detailButton3">
+                            <div class="card card-body">
+                                <div class="container text-center">
+                                    <div class="row">
+                                        <div class="col-sm">
+                                            <img src="./images/C.png" style="height: 32px; width: 32px;"
+                                                alt="C language">
+                                            <p>C</p>
+                                        </div>
+                                        <div class="col-sm">
+                                            <img src="./images/vscode.png" style="height: 32px; width: 32px;"
+                                                alt="VSCode">
+                                            <p>VS Code</p>
+                                        </div>
+                                        <div class="col-sm">
+                                            <img src="./images/linux.png" style="height: 32px; width: 32px;" alt="">
+                                            <p>Linux</p>
+                                        </div>
+
+                                        <div class="col-sm">
+                                            <img src="./images/gitHub.png" style="height: 32px; width: 32px;" alt="">
+                                            <p>GitHub</p>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-sm">
+                                                <img width="32" height="32"
+                                                    src="https://img.icons8.com/external-solidglyph-m-oki-orlando/32/external-compiler-programming-solid-solidglyph-m-oki-orlando.png"
+                                                    alt="external-compiler-programming-solid-solidglyph-m-oki-orlando" />
+                                                <p>ARM GCC Cross Compiler</p>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="beatBox" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+            aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="staticBackdropLabel">Beat Box </h1>
+                        <a class="btn btn-danger" href="#" role="button" style="opacity: 0.5;" data-bs-toggle="tooltip"
+                            data-bs-placement="bottom" data-bs-custom-class="custom-tooltip"
+                            data-bs-title="Coming Soon.....">Demo
+                            <i class="bi bi-play-fill"></i>
+                        </a>
+                    </div>
+                    <div class="modal-body">
+                        <p>
+                            Beat-Box is a sophisticated endeavor in embedded systems, focusing on audio generation
+                            and hardware control. Built on the BeagleBone platform, it transforms this device into a
+                            dynamic digital drum kit. Central to the project is real-time audio generation through
+                            the ALSA API, with multi-threaded execution. </p>
+
+                        <p> Beat-Box offers diverse drum beat modes, customizable sounds, and precise control over
+                            tempo and volume parameters. Hardware components, including a joystick, LED matrix, and
+                            buttons, enhance user interaction. The project prioritizes memory management and
+                            Valgrind analysis for stability. </p>
+
+                        <p> This technical playground invites enthusiasts to explore embedded audio processing,
+                            hardware integration, and real-time optimization. Whether you're a seasoned developer or
+                            a curious learner, Beat-Box presents a captivating journey into the world of embedded
+                            audio systems.
+                        </p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+
+
+                        <button class="btn btn-primary" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#detailCollapsor" aria-expanded="false"
+                            aria-controls="collapseWidthExample">
+                            Details <i class="bi bi-forward-fill"></i>
+                        </button>
+
+
+                        <div class="collapse " id="detailCollapsor">
+                            <button class="btn btn-danger" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#detailButton1" aria-expanded="false"
+                                aria-controls="multiCollapseExample2">Skills Honed</button>
+                            <button class="btn btn-danger" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#detailButton2" aria-expanded="false"
+                                aria-controls="multiCollapseExample2">Components</button>
+                            <button class="btn btn-danger" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#detailButton3" aria-expanded="false"
+                                aria-controls="multiCollapseExample2">Dev Tools</button>
+                        </div>
+
+                        <div class="collapse multi-collapse" id="detailButton1">
+                            <div class="card card-body">
+                                <div class="container text-center">
+                                    <div class="row">
+                                        <h4 class="skills" style="text-align: center;  text-decoration: underline">
+                                            Technical</h4>
+
+
+                                        <div class="col-sm">
+                                            <i class="bi bi-square-fill"></i>
+                                            <p>Button Integration</p>
+                                        </div>
+                                        <div class="col-sm">
+                                            <i class="bi bi-joystick"></i>
+                                            <p>Joystick Integration</p>
+                                        </div>
+                                        <div class="col-sm">
+                                            <i class="bi bi-fullscreen"></i>
+                                            <p>LED Matrix Integration</p>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm">
+                                            <i class="bi bi-music-note-list"></i>
+                                            <p>Real Time Audio Programming</p>
+                                        </div>
+                                        <div class="col-sm">
+                                            <i class="bi bi-node-plus-fill"></i>
+                                            <p>API Integration</p>
+                                        </div>
+                                        <div class="col-sm">
+                                            <i class="bi bi-asterisk"></i>
+                                            <p>GPIO Programming</p>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm">
+                                            <i class="bi bi-diagram-3-fill"></i>
+                                            <p>Multithreading</p>
+                                        </div>
+
+                                        <div class="col-sm">
+                                            <i class="bi bi-memory"></i>
+                                            <p>Memory Management</p>
+                                        </div>
+                                        <div class="col-sm">
+                                            <i class="bi bi-bag-check-fill"></i>
+                                            <p>Testing & Validation</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-sm">
+                                            <i class="bi bi-display"></i>
+                                            <p>System Monitoring</p>
+                                        </div>
+
+                                        <div class="col-sm">
+                                            <i class="bi bi-toggles"></i>
+                                            <p>UI Integration</p>
+                                        </div>
+                                        <div class="col-sm">
+                                            <i class="bi bi-terminal-fill"></i>
+                                            <p>Makefile Configuration</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="col">
+                                        <h4 class="skills" style="text-align: center; text-decoration: underline;">
+                                            Soft</h4>
+                                        <div class="row">
+                                            <div class="col-sm"><i class="bi bi-people-fill"></i>
+                                                <p>Collaboration</p>
+                                            </div>
+                                            <div class="col-sm"><i class="bi bi-android"></i>
+                                                <p>Adaptability</p>
+                                            </div>
+                                            <div class="col-sm"><img width="20" height="20"
+                                                    src="https://img.icons8.com/ios-filled/50/brain.png" alt="brain" />
+                                                <p>Critical Thinking</p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-sm">
+                                                <i class="bi bi-lightbulb-fill"></i>
+                                                <p>Problem Solving</p>
+                                            </div>
+                                            <div class="col-sm">
+                                                <i class="bi bi-card-checklist"></i>
+                                                <p>Attention to Detail</p>
+                                            </div>
+                                            <div class="col-sm">
+                                                <i class="bi bi-clock-fill"></i>
+                                                <p>Time Management</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="collapse multi-collapse" id="detailButton2">
+                            <div class="card card-body">
+                                <div class="container text-center">
+                                    <div class="row" id="components">
+                                        <div class="col-sm">
+                                            <a href="https://www.adafruit.com/product/872" style="width: 100%; height: 100%;"
+                                                target="_blank">
+                                                8*8 LED matrix</a>
+                                        </div>
+                                        <div class="col-sm">
+                                            <a href="https://www.adafruit.com/product/2765" role="button"
+                                                target="_blank">Joystick</a>
+                                        </div>
+                                        <div class="col-sm">
+                                            <a href="https://www.beagleboard.org/boards/seeedstudio-beaglebone-green"
+                                                role="button" target="_blank">BeagleBone Green</a>
+                                        </div>
+                                        <div class="col-sm">
+                                            <a href="https://www.adafruit.com/product/1009" role="button"
+                                                target="_blank">
+                                                Buttons</a>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="collapse multi-collapse" id="detailButton3">
+                            <div class="card card-body">
+                                <div class="container text-center">
+                                    <div class="row">
+                                        <div class="col-sm">
+                                            <img src="./images/C.png" style="height: 32px; width: 32px;"
+                                                alt="C language">
+                                            <p>C</p>
+                                        </div>
+                                        <div class="col-sm">
+                                            <img src="./images/vscode.png" style="height: 32px; width: 32px;"
+                                                alt="VSCode">
+                                            <p>VS Code</p>
+                                        </div>
+                                        <div class="col-sm">
+                                            <img src="./images/linux.png" style="height: 32px; width: 32px;" alt="">
+                                            <p>Linux</p>
+                                        </div>
+
+                                        <div class="col-sm">
+                                            <img src="./images/gitHub.png" style="height: 32px; width: 32px;" alt="">
+                                            <p>GitHub</p>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-sm">
+                                                <img width="32" height="32"
+                                                    src="https://img.icons8.com/external-solidglyph-m-oki-orlando/32/external-compiler-programming-solid-solidglyph-m-oki-orlando.png"
+                                                    alt="external-compiler-programming-solid-solidglyph-m-oki-orlando" />
+                                                <p>ARM GCC Cross Compiler</p>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="lightDip" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+            aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="staticBackdropLabel">Light Dip Analyzer</h1>
+                        <a class="btn btn-danger" href="#" role="button" style="opacity: 0.5;" data-bs-toggle="tooltip"
+                            data-bs-placement="bottom" data-bs-custom-class="custom-tooltip"
+                            data-bs-title="Coming Soon.....">Demo
+                            <i class="bi bi-play-fill"></i>
+                        </a>
+                    </div>
+                    <div class="modal-body">
+                        <p>
+                            This application orchestrates a symphony of tasks—rapid light level sampling, in-depth
+                            statistical analysis, data presentation on an 8x8 LED matrix via joystick inputs, and
+                            responsive handling of user commands. </p>
+
+                        <p>Throughout this expedition, technical nuances are uncovered, encompassing
+                            cross-compilation, debugging methodologies, thread management, GPIO intricacies, and
+                            seamless hardware integration. Fasten your seatbelts as this technical adventure unfolds
+                            into the world of debugging and light sampling!
+                        </p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+
+
+                        <button class="btn btn-primary" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#detailCollapsor" aria-expanded="false"
+                            aria-controls="collapseWidthExample">
+                            Details <i class="bi bi-forward-fill"></i>
+                        </button>
+
+
+                        <div class="collapse " id="detailCollapsor">
+                            <button class="btn btn-danger" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#detailButton1" aria-expanded="false"
+                                aria-controls="multiCollapseExample2">Skills Honed</button>
+                            <button class="btn btn-danger" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#detailButton2" aria-expanded="false"
+                                aria-controls="multiCollapseExample2">Components</button>
+                            <button class="btn btn-danger" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#detailButton3" aria-expanded="false"
+                                aria-controls="multiCollapseExample2">Dev Tools</button>
+                        </div>
+
+                        <div class="collapse multi-collapse" id="detailButton1">
+                            <div class="card card-body">
+                                <div class="container text-center">
+                                    <div class="row">
+                                        <h4 class="skills" style="text-align: center;  text-decoration: underline">
+                                            Technical</h4>
+                                        <div class="col-sm">
+                                            <i class="bi bi-brightness-high-fill"></i>
+                                            <p>Photoresistor Integration</p>
+                                        </div>
+                                        <div class="col-sm">
+                                            <i class="bi bi-joystick"></i>
+                                            <p>Joystick Integration</p>
+                                        </div>
+                                        <div class="col-sm">
+                                            <i class="bi bi-fullscreen"></i>
+                                            <p>Led Matrix Integration</p>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm">
+                                            <i class="bi bi-activity"></i>
+                                            <p>Analog-to-Digital Conversion</p>
+                                        </div>
+                                        <div class="col-sm">
+                                            <i class="bi bi-cpu-fill"></i>
+                                            <p>I2C Communication</p>
+                                        </div>
+                                        <div class="col-sm">
+                                            <i class="bi bi-clock-history"></i>
+                                            <p>Real-Time Data Analysis</p>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm">
+                                            <i class="bi bi-bug-fill"></i>
+                                            <p>Cross Debugging</p>
+                                        </div>
+
+                                        <div class="col-sm">
+                                            <i class="bi bi-file-binary-fill"></i>
+                                            <p>Makefile Usage</p>
+                                        </div>
+                                        <div class="col-sm">
+                                            <i class="bi bi-bag-check-fill"></i>
+                                            <p>Testing & Validation</p>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="col">
+                                        <h4 class="skills" style="text-align: center; text-decoration: underline;">
+                                            Soft</h4>
+                                        <div class="row">
+                                            <div class="col-sm"><i class="bi bi-people-fill"></i>
+                                                <p>Collaboration</p>
+                                            </div>
+                                            <div class="col-sm"><i class="bi bi-android"></i>
+                                                <p>Adaptability</p>
+                                            </div>
+                                            <div class="col-sm"><img width="20" height="20"
+                                                    src="https://img.icons8.com/ios-filled/50/brain.png" alt="brain" />
+                                                <p>Critical Thinking</p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-sm">
+                                                <i class="bi bi-lightbulb-fill"></i>
+                                                <p>Problem Solving</p>
+                                            </div>
+                                            <div class="col-sm">
+                                                <i class="bi bi-card-checklist"></i>
+                                                <p>Attention to Detail</p>
+                                            </div>
+                                            <div class="col-sm">
+                                                <i class="bi bi-clock-fill"></i>
+                                                <p>Time Management</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="collapse multi-collapse" id="detailButton2">
+                            <div class="card card-body">
+                                <div class="container text-center">
+                                    <div class="row" id="components">
+                                        <div class="col-sm">
+                                            <a href="https://www.adafruit.com/product/161" target="_blank">
+                                                Photoresistor</a>
+                                        </div>
+                                        <div class="col-sm">
+                                            <a href="https://www.adafruit.com/product/872" target="_blank">
+                                                8*8 LED matrix</a>
+                                        </div>
+                                        <div class="col-sm">
+                                            <a href="https://www.adafruit.com/product/2765" target="_blank">Joystick</a>
+                                        </div>
+                                        <div class="col-sm">
+                                            <a href="https://www.beagleboard.org/boards/seeedstudio-beaglebone-green"
+                                                type="button" target="_blank">BeagleBone Green</a>
+                                        </div>
+                                        <div class="col-sm">
+                                            <a href="https://www.adafruit.com/product/1009" target="_blank">Buttons</a>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="collapse multi-collapse" id="detailButton3">
+                            <div class="card card-body">
+                                <div class="container text-center">
+                                    <div class="row">
+                                        <div class="col-sm">
+                                            <img src="./images/C.png" style="height: 32px; width: 32px;"
+                                                alt="C language">
+                                            <p>C</p>
+                                        </div>
+                                        <div class="col-sm">
+                                            <img src="./images/vscode.png" style="height: 32px; width: 32px;"
+                                                alt="VSCode">
+                                            <p>VS Code</p>
+                                        </div>
+                                        <div class="col-sm">
+                                            <img src="./images/linux.png" style="height: 32px; width: 32px;" alt="">
+                                            <p>Linux</p>
+                                        </div>
+
+                                        <div class="col-sm">
+                                            <img src="./images/gitHub.png" style="height: 32px; width: 32px;" alt="">
+                                            <p>GitHub</p>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-sm">
+                                                <img width="32" height="32"
+                                                    src="https://img.icons8.com/external-solidglyph-m-oki-orlando/32/external-compiler-programming-solid-solidglyph-m-oki-orlando.png"
+                                                    alt="external-compiler-programming-solid-solidglyph-m-oki-orlando" />
+                                                <p>ARM GCC Cross Compiler</p>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="trackour" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+            aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="staticBackdropLabel">Trackour</h1>
+                        <a class="btn btn-danger" href="#" role="button" style="opacity: 0.5;" data-bs-toggle="tooltip"
+                            data-bs-placement="bottom" data-bs-custom-class="custom-tooltip"
+                            data-bs-title="Coming Soon.....">Demo
+                            <i class="bi bi-play-fill"></i>
+                        </a>
+                    </div>
+                    <div class="modal-body">
+                        <p>Trackour is a web application that assists both beginner and experienced music creators
+                            with planning their mix or mashup projects. Users will be able to search for music
+                            through Trackour using harmonic details of the songs, such as key, tempo, time
+                            signature, etcetera. The search function will give users the option to narrow their
+                            search down to harmonically compatible songs, which will be determined using a system
+                            based on the Camelot Wheel. Additionally, Trackour will provide collaborative
+                            functionality, allowing users to plan, save, and share their mix projects with other
+                            users.<br>
+                            <b> Username: admin</b><br>
+                            <b>Password: admin123</b>
+                        </p>
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+
+
+                        <button class="btn btn-primary" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#detailCollapsor" aria-expanded="false"
+                            aria-controls="collapseWidthExample">
+                            Details <i class="bi bi-forward-fill"></i>
+                        </button>
+
+
+                        <div class="collapse " id="detailCollapsor">
+                            <button class="btn btn-danger" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#detailButton1" aria-expanded="false"
+                                aria-controls="multiCollapseExample2">Skills Honed</button>
+                            <button class="btn btn-danger" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#detailButton2" aria-expanded="false"
+                                aria-controls="multiCollapseExample2">Components</button>
+                            <button class="btn btn-danger" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#detailButton3" aria-expanded="false"
+                                aria-controls="multiCollapseExample2">Dev Tools</button>
+                        </div>
+
+                        <div class="collapse multi-collapse" id="detailButton1">
+                            <div class="card card-body">
+                                <div class="container text-center">
+                                    <div class="row">
+                                        <h4 class="skills" style="text-align: center;  text-decoration: underline">
+                                            Technical</h4>
+                                        <div class="col-sm">
+                                            <i class="bi bi-globe2"></i>
+                                            <p>Web Application Development</p>
+                                        </div>
+                                        <div class="col-sm">
+                                            <i class="bi bi-person-bounding-box"></i>
+                                            <p>User Authentication</p>
+                                        </div>
+                                        <div class="col-sm">
+                                            <i class="bi bi-shield-fill-check"></i>
+                                            <p>Security</p>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm">
+                                            <i class="bi bi-bag-check-fill"></i>
+                                            <p>Quality Assurance</p>
+                                        </div>
+                                        <div class="col-sm">
+                                            <i class="bi bi-palette-fill"></i>
+                                            <p>UX Design</p>
+                                        </div>
+                                        <div class="col-sm">
+                                            <i class="bi bi-cloud-check-fill"></i>
+                                            <p>Collabration Functionality</p>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm">
+                                            <i class="bi bi-front"></i>
+                                            <p>Front-End Development</p>
+                                        </div>
+                                        <div class="col-sm">
+                                            <i class="bi bi-database-fill-check"></i>
+                                            <p>Database Design</p>
+                                        </div>
+                                        <div class="col-sm">
+                                            <i class="bi bi-recycle"></i>
+                                            <p>Agile Methodologies</p>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm">
+                                            <i class="bi bi-node-plus-fill"></i>
+                                            <p>API Integration</p>
+                                        </div>
+                                        <div class="col-sm">
+                                            <i class="bi bi-person-lock"></i>
+                                            <p>User Account Management</p>
+                                        </div>
+                                        <div class="col-sm">
+                                            <i class="bi bi-bug-fill"></i>
+                                            <p>Debugging</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="col">
+                                        <h4 class="skills" style="text-align: center; text-decoration: underline;">
+                                            Soft</h4>
+                                        <div class="row">
+                                            <div class="col-sm"><i class="bi bi-people-fill"></i>
+                                                <p>Collaboration</p>
+                                            </div>
+                                            <div class="col-sm"><i class="bi bi-android"></i>
+                                                <p>Adaptability</p>
+                                            </div>
+                                            <div class="col-sm"><img width="20" height="20"
+                                                    src="https://img.icons8.com/ios-filled/50/brain.png" alt="brain" />
+                                                <p>Critical Thinking</p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-sm">
+                                                <i class="bi bi-lightbulb-fill"></i>
+                                                <p>Problem Solving</p>
+                                            </div>
+                                            <div class="col-sm">
+                                                <i class="bi bi-card-checklist"></i>
+                                                <p>Attention to Detail</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="collapse multi-collapse" id="detailButton2">
+                            <div class="card card-body">
+                                <div class="container text-center">
+                                    <div class="row" id="components">
+
+                                        <div class="col-sm">
+                                            <a href="https://www.postgresql.org/" target="_blank">
+                                                PostgreSQL</a>
+                                        </div>
+
+                                        <div class="col-sm">
+                                            <a href="https://vaadin.com/docs/latest/" target="_blank">
+                                                Vaadin</a>
+                                        </div>
+
+                                        <div class="col-sm">
+                                            <a href="https://spring.io/projects/spring-boot/" type="button"
+                                                target="_blank">Springboot</a>
+                                        </div>
+
+                                        <div class="col-sm">
+                                            <a href="https://developer.spotify.com/documentation/web-api"
+                                                target="_blank">
+                                                SpotifyAPI</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="collapse multi-collapse" id="detailButton3">
+                            <div class="card card-body">
+                                <div class="container text-center">
+                                    <div class="row">
+                                        <div class="col-sm">
+                                            <img src="./images/java.png" style="height: 32px; width: 32px;" alt="JAVA">
+                                            <p>JAVA</p>
+                                        </div>
+
+                                        <div class="col-sm">
+                                            <img src="./images/html-5_318-566077.avif"
+                                                style="height: 32px; width: 32px;" alt="">
+                                            <p>HTML</p>
+                                        </div>
+
+                                        <div class="col-sm">
+                                            <img src="./images/css_318-698167.avif" style="height: 32px; width: 32px;"
+                                                alt="">
+                                            <p>CSS</p>
+                                        </div>
+
+
+                                        <div class="col-sm">
+                                            <img src="./images/javaScript.png" style="height: 32px; width: 32px;"
+                                                alt="">
+                                            <p>JavaScript</p>
+                                        </div>
+
+                                        <div class="col-sm">
+                                            <img src="./images/gitHub.png" style="height: 32px; width: 32px;" alt="">
+                                            <p>GitHub</p>
+                                        </div>
+
+                                        <div class="col-sm">
+                                            <img src="./images/vscode.png" style="height: 32px; width: 32px;"
+                                                alt="VSCode">
+                                            <p>VS Code</p>
+                                        </div>
+                                        <div class="col-sm">
+                                            <img src="./images/trello.png" style="height: 32px; width: 32px;" alt="">
+                                            <p>Trello</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="studentTracker" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+            aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="staticBackdropLabel">Student Tracker</h1>
+                        <a class="btn btn-danger" href="#" role="button" style="opacity: 0.5;" data-bs-toggle="tooltip"
+                            data-bs-placement="bottom" data-bs-custom-class="custom-tooltip"
+                            data-bs-title="Coming Soon.....">Demo
+                            <i class="bi bi-play-fill"></i>
+                        </a>
+                    </div>
+                    <div class="modal-body">
+                        <p>Experience 'StudentTracker,' a dynamic application I developed using the Spring
+                            framework. This project showcases my ability to create, manage, and visualize student
+                            records, offering seamless user interaction through an intuitive web interface. With a
+                            focus on usability and documentation, I demonstrated my skills in Spring development,
+                            user-centric design, and effective content presentation. <br>
+                            <b>Note:<i> This website takes around 7-10 minutes to bootup (Due to <a
+                                        href="https://render.com/" target="_blank"> Render's</a>
+                                    services)</i></b>
+                        </p>
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+
+
+                        <button class="btn btn-primary" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#detailCollapsor" aria-expanded="false"
+                            aria-controls="collapseWidthExample">
+                            Details <i class="bi bi-forward-fill"></i>
+                        </button>
+
+
+                        <div class="collapse " id="detailCollapsor">
+                            <button class="btn btn-danger" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#detailButton1" aria-expanded="false"
+                                aria-controls="multiCollapseExample2">Skills Honed</button>
+                            <button class="btn btn-danger" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#detailButton2" aria-expanded="false"
+                                aria-controls="multiCollapseExample2">Components</button>
+                            <button class="btn btn-danger" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#detailButton3" aria-expanded="false"
+                                aria-controls="multiCollapseExample2">Dev Tools</button>
+                        </div>
+
+                        <div class="collapse multi-collapse" id="detailButton1">
+                            <div class="card card-body">
+                                <div class="container text-center">
+                                    <div class="row">
+                                        <h4 class="skills" style="text-align: center;  text-decoration: underline">
+                                            Technical</h4>
+                                        <div class="col-sm">
+                                            <img width="20" height="20" style="filter: grayscale(100%);"
+                                                src="https://img.icons8.com/color/48/000000/spring-logo.png"
+                                                alt="spring-logo" />
+                                            <p>Spring Framework</p>
+                                        </div>
+                                        <div class="col-sm">
+                                            <i class="bi bi-database-check"></i>
+                                            <p>Database Design</p>
+                                        </div>
+                                        <div class="col-sm">
+                                            <i class="bi bi-pencil-square"></i>
+                                            <p>CRUD Operations</p>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm">
+                                            <i class="bi bi-gear-wide-connected"></i>
+                                            <p>RESTful API Design</p>
+                                        </div>
+                                        <div class="col-sm">
+                                            <i class="bi bi-palette-fill"></i>
+                                            <p>UI Mockup</p>
+                                        </div>
+                                        <div class="col-sm">
+                                            <i class="bi bi-bug-fill"></i>
+                                            <p>Debugging & Testing</p>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="col">
+                                        <h4 class="skills" style="text-align: center; text-decoration: underline;">
+                                            Soft</h4>
+                                        <div class="row">
+                                            <div class="col-sm"><i class="bi bi-people-fill"></i>
+                                                <p>User-Centric focus</p>
+                                            </div>
+                                            <div class="col-sm"><i class="bi bi-clock-fill"></i>
+                                                <p>Time Management</p>
+                                            </div>
+                                            <div class="col-sm"><img width="20" height="20"
+                                                    src="https://img.icons8.com/ios-filled/50/brain.png" alt="brain" />
+                                                <p>Critical Thinking</p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-sm">
+                                                <i class="bi bi-lightbulb-fill"></i>
+                                                <p>Problem Solving</p>
+                                            </div>
+                                            <div class="col-sm">
+                                                <i class="bi bi-card-checklist"></i>
+                                                <p>Attention to Detail</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="collapse multi-collapse" id="detailButton2" style="width: 100%;">
+                            <div class="card card-body">
+                                <div class="container text-center">
+                                    <div class="row" id="components">
+
+                                        <div class="col-sm">
+                                            <a href="https://www.postgresql.org/" target="_blank">
+                                                PostgreSQL</a>
+                                        </div>
+
+                                        <div class="col-sm">
+                                            <a href="https://spring.io/projects/spring-boot/" type="button"
+                                                target="_blank">Springboot</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="collapse multi-collapse" id="detailButton3">
+                            <div class="card card-body">
+                                <div class="container text-center">
+                                    <div class="row">
+                                        <div class="col-sm">
+                                            <img src="./images/java.png" style="height: 32px; width: 32px;" alt="JAVA">
+                                            <p>JAVA</p>
+                                        </div>
+
+                                        <div class="col-sm">
+                                            <img src="./images/html-5_318-566077.avif"
+                                                style="height: 32px; width: 32px;" alt="">
+                                            <p>HTML</p>
+                                        </div>
+
+                                        <div class="col-sm">
+                                            <img src="./images/css_318-698167.avif" style="height: 32px; width: 32px;"
+                                                alt="">
+                                            <p>CSS</p>
+                                        </div>
+
+
+                                        <div class="col-sm">
+                                            <img src="./images/javaScript.png" style="height: 32px; width: 32px;"
+                                                alt="">
+                                            <p>JavaScript</p>
+                                        </div>
+
+                                        <div class="col-sm">
+                                            <img src="./images/gitHub.png" style="height: 32px; width: 32px;" alt="">
+                                            <p>GitHub</p>
+                                        </div>
+
+                                        <div class="col-sm">
+                                            <img src="./images/vscode.png" style="height: 32px; width: 32px;"
+                                                alt="VSCode">
+                                            <p>VS Code</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="hist" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+            aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="staticBackdropLabel">Histogram</h1>
+                        <a class="btn btn-danger" href="#" role="button" style="opacity: 0.5;" data-bs-toggle="tooltip"
+                            data-bs-placement="bottom" data-bs-custom-class="custom-tooltip"
+                            data-bs-title="Coming Soon.....">Demo
+                            <i class="bi bi-play-fill"></i>
+                        </a>
+
+                    </div>
+                    <div class="modal-body">
+                        <p> Histogram Generator is a web-page that gives the count of each student in their grade
+                            categories. This page incorporates input boxes for grades, expertly managed by a
+                            JavaScript file, "calculate.js." Visitors to the website can input new grades, and may
+                            also change the grade boundaries as they wish, histogram dynamically adapts to
+                            illustrate the distribution of students across various grade ranges. To ensure a
+                            seamless user experience, the system gracefully handles invalid inputs, providing
+                            helpful feedback.</p>
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+
+                        <button class="btn btn-primary" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#detailCollapsor" aria-expanded="false"
+                            aria-controls="collapseWidthExample">
+                            Details <i class="bi bi-forward-fill"></i>
+                        </button>
+
+
+                        <div class="collapse " id="detailCollapsor">
+                            <button class="btn btn-danger" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#detailButton1" aria-expanded="false"
+                                aria-controls="multiCollapseExample2">Skills Honed</button>
+
+                            <button class="btn btn-danger" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#detailButton3" aria-expanded="false"
+                                aria-controls="multiCollapseExample2">Dev Tools</button>
+                        </div>
+
+                        <div class="collapse multi-collapse" id="detailButton1">
+                            <div class="card card-body">
+                                <div class="container text-center">
+                                    <div class="row">
+                                        <h4 class="skills" style="text-align: center;  text-decoration: underline">
+                                            Technical</h4>
+                                        <div class="col-sm">
+                                            <i class="bi bi-front"></i>
+                                            <p>Front-End Development</p>
+                                        </div>
+                                        <div class="col-sm">
+                                            <i class="bi bi-palette-fill"></i>
+                                            <p>UI/UX Design</p>
+                                        </div>
+                                        <div class="col-sm">
+                                            <i class="bi bi-clipboard-data-fill"></i>
+                                            <p>Data Management</p>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm">
+                                            <i class="bi bi-bug-fill"></i>
+                                            <p>Error Handling</p>
+                                        </div>
+                                        <div class="col-sm">
+                                            <i class="bi bi-bag-check-fill"></i>
+                                            <p>Testing and Validation</p>
+                                        </div>
+                                        <div class="col-sm">
+                                            <i class="bi bi-award-fill"></i>
+                                            <p>Code Documentaion</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="col">
+                                        <h4 class="skills" style="text-align: center; text-decoration: underline;">
+                                            Soft</h4>
+                                        <div class="row">
+                                            <div class="col-sm"><i class="bi bi-people-fill"></i>
+                                                <p>User-Centric focus</p>
+                                            </div>
+                                            <div class="col-sm"><i class="bi bi-clock-fill"></i>
+                                                <p>Time Management</p>
+                                            </div>
+                                            <div class="col-sm"><img width="20" height="20"
+                                                    src="https://img.icons8.com/ios-filled/50/brain.png" alt="brain" />
+                                                <p>Critical Thinking</p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-sm">
+                                                <i class="bi bi-lightbulb-fill"></i>
+                                                <p>Problem Solving</p>
+                                            </div>
+                                            <div class="col-sm">
+                                                <i class="bi bi-card-checklist"></i>
+                                                <p>Attention to Detail</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="collapse multi-collapse" id="detailButton3" style="width: 100%;">
+                            <div class="card card-body">
+                                <div class="container text-center">
+                                    <div class="row">
+                                        <div class="col-sm">
+                                            <img src="./images/html-5_318-566077.avif"
+                                                style="height: 32px; width: 32px;" alt="HTML">
+                                            <p>HTML</p>
+                                        </div>
+
+                                        <div class="col-sm">
+                                            <img src="./images/javaScript.png" style="height: 32px; width: 32px;"
+                                                alt="">
+                                            <p>JavaScript</p>
+                                        </div>
+
+                                        <div class="col-sm">
+                                            <img src="./images/gitHub.png" style="height: 32px; width: 32px;" alt="">
+                                            <p>GitHub</p>
+                                        </div>
+
+                                        <div class="col-sm">
+                                            <img src="./images/css_318-698167.avif" style="height: 32px; width: 32px;"
+                                                alt="">
+                                            <p>CSS</p>
+                                        </div>
+
+                                        <div class="col-sm">
+                                            <img src="./images/vscode.png" style="height: 32px; width: 32px;"
+                                                alt="VSCode">
+                                            <p>VS Code</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="portfolio" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+            aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="staticBackdropLabel">Personal Portfolio</h1>
+                    </div>
+                    <div class="modal-body">
+                        <p>See for yourself ! <i class="bi bi-emoji-smile-fill"></i></p>
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button class="btn btn-danger" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#detailButton3" aria-expanded="false"
+                            aria-controls="multiCollapseExample2">Dev
+                            Tools<i class="bi bi-forward-fill"></i></button>
+                    </div>
+
+                    <div class="collapse multi-collapse" id="detailButton3">
+                        <div class="card card-body">
+                            <div class="container text-center" style="width: 100%;">
+                                <div class="row">
+                                    <div class="col-sm">
+                                        <img src="./images/html-5_318-566077.avif" style="height: 32px; width: 32px;"
+                                            alt="HTML">
+                                        <p>HTML</p>
+                                    </div>
+
+                                    <div class="col-sm">
+                                        <img src="./images/javaScript.png" style="height: 32px; width: 32px;" alt="">
+                                        <p>JavaScript</p>
+                                    </div>
+
+                                    <div class="col-sm">
+                                        <img src="./images/gitHub.png" style="height: 32px; width: 32px;" alt="">
+                                        <p>GitHub</p>
+                                    </div>
+
+                                    <div class="col-sm">
+                                        <img src="./images/css_318-698167.avif" style="height: 32px; width: 32px;"
+                                            alt="">
+                                        <p>CSS</p>
+                                    </div>
+
+                                    <div class="col-sm">
+                                        <img src="./images/bootstrap.png" style="height: 32px; width: 32px;" alt="">
+                                        <p>Bootstrap</p>
+                                    </div>
+
+                                    <div class="col-sm">
+                                        <img src="./images/vscode.png" style="height: 32px; width: 32px;" alt="VSCode">
+                                        <p>VS Code</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- <div class="modal fade" id="db" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+            aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="staticBackdropLabel">Election Database</h1>
+                        <a class="btn btn-danger" href="" role="button" style="opacity: 0.5;" target="_blank">Demo
+                            <i class="bi bi-play-fill"></i>
+                        </a>
+                    </div>
+                    <div class="modal-body">
+                        <p></p>
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Details <i
+                                class="bi bi-forward-fill"></i></button>
+                    </div>
+
+                </div>
+            </div>
+        </div> -->
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+        const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+    </script>
+</body>
+
+</html>
