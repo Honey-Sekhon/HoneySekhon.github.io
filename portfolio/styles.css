@@ -1,33 +1,188 @@
-.parallax-content {
-    opacity: 0;
-    filter: blur(5px);
-    /* transform: translateX(-10%); */
-    transition: all 1s ease-in-out;
+/* -----------------------index------------------- */
+.landingView {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 5%;
 }
 
-.show {
-    opacity: 1;
-    filter: blur(0);
-    /* transform: translateX(0); */
+.left {
+    display: flex;
+    margin: 5%;
+    width: 100%;
 }
 
-@media(prefers-reduced-motion) {
-    .parallax-content {
-        transition: none;
+.right>img {
+    width: 50%;
+    height: 100%;
+    margin-left: 25%;
+    margin-top: 15%;
+    background-color: #f5ebe0;
+}
+
+/* ----------------------------- Exp Section---------------- */
+.Work{
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 2rem;
+}
+
+#footerButton > .btn{
+    background-color:#ffb5c2 ;
+    color:#023047;
+    border-style: solid;
+  border-color: #023047;
+  border-width: revert;
+}
+
+.JobTitle{
+    display: flex;
+    background-color: #ffe9ee;
+    color: #023047;
+    border-radius: 1.25rem;
+    height: 12rem;
+    width: 12rem;   
+    align-items: center;
+    text-align: center;
+    padding: 1rem;
+    justify-content: center;
+    border-style: ridge;
+}
+
+.JobTitle:hover {
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    background-color: #023047;
+    transform: translate(0, -5px);
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.399);
+    color: #ffb5c2;
+}
+
+.icons{
+    height: 20px;
+    width: 20px;
+}
+
+/*---------------------------- Project Section ----------------------------  */
+
+@media (max-width: 498px) {
+    .ProjectNames {
+        height: 6rem;
+        width: 6rem;
+    }
+
+    .ProjectNames>h3 {
+        font-size: x-small;
+    }
+
+    .JobTitle {
+        height: 6rem;
+        width: 6rem;
+    }
+
+    .JobTitle>h3 {
+        font-size: x-small;
+    }
+
+    .icon-link.icon-link-hover.position-absolute.top-0.start-0 {
+        display: none;
     }
 }
 
-@media (max-width: 767px) {
-    .landingView {
-        flex-direction: column-reverse; /* Stack sections vertically on smaller screens */
-    }
+#components {
+    gap: 1rem;
+    align-content: center;
+}
 
-    .fixed-bottom {
-        flex-direction: column;
-        height: auto; /* Adjust height for better display on smaller screens */
-    }
+#components>div>a {
+    text-decoration: none;
+    color: #42273b;
 
-    .fixed-bottom a {
-        margin: 5px 0; /* Adjust margin for better spacing on smaller screens */
-    }
+}
+
+#components>div {
+    background-color: #eddcd2;
+    border-color: #42273b;
+    border-radius: 0.8rem;
+    border-style: solid;
+    border-width: 2px;
+    align-content: center;
+}
+
+#components>div:hover {
+    background-color: #D5DFE5;
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    transform: translate(0, -3px);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+#detailCollapsor > .btn{
+    color: #42273b;
+    background-color: #eddcd2;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #42273b;
+}
+
+.ProjectList {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 2rem;
+    margin-right: 0rem;
+    color: #42273b;
+}
+
+.ProjectNames {
+    background-color: #eddcd2;
+    height: 12rem;
+    width: 12rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1.25rem;
+    padding: 1rem;
+    text-align: center;
+}
+
+.ProjectNames:hover {
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    background-color:  #42273b;
+    transform: translate(0, -5px);
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.399);
+    color: #fff1e6;
+}
+
+.ProjectNames>h3 {
+    font-weight: 500;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.custom-tooltip {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    width: 200px;
+    z-index: 1000;
+}
+
+#detailCollapsor {
+    width: 100%;
+    text-align: center;
+}
+
+#detailCollapsor button {
+    margin: 2.5px;
+}
+
+.custom-tooltip {
+    z-index: 1060;
+    --bs-tooltip-bg: #800080;
+    --bs-tooltip-color: white;
+    background: none;
 }
