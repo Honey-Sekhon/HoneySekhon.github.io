@@ -8,28 +8,28 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     <link href="https://unpkg.com/@popperjs/core@2">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="./styles.css">
 </head>
 
 <style>
     body {
-        background: linear-gradient(180deg, #caf0f8 0%, #b4cc87 100%);
+        background: #d8e2dc;
         height: 100vh;
         width: 100vw;
     }
 
     .icon-link {
-        text-decoration-color: #023047;
+        text-decoration-color: #006d77;
     }
 </style>
 
 <body>
     <div class="container-fluid " style="padding: 0px;">
         <nav
-            style="text-align: center; font-weight: bolder; font-size: 3.5rem; color: #023047; background-color:#bcdab2">
+            style="text-align: center; font-weight: bolder; font-size: 3.5rem; color: #006d77; background-color:#83c5be">
             <a class="icon-link icon-link-hover position-absolute top-0 start-0 "
-                style="--bs-icon-link-transform: translate3d(0, -.125rem, 0); font-size: medium; color:#023047;margin: 30px 15px;"
+                style="--bs-icon-link-transform: translate3d(0, -.125rem, 0); font-size: medium; color:#006d77;margin: 30px 15px;"
                 href="./index.html">
                 <i class="bi bi-house-fill"></i>
                 Home
@@ -96,7 +96,8 @@
                             aria-expanded="false" aria-controls="collapse">
                             Skills Acquired
                         </button>
-                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-danger" onclick="closeModal()"
+                            data-bs-dismiss="modal">Close</button>
                     </div>
 
                     <div class="collapse" id="skillRec">
@@ -184,7 +185,8 @@
                             aria-expanded="false" aria-controls="collapse">
                             Skills Acquired
                         </button>
-                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-danger" onclick="closeModal()"
+                            data-bs-dismiss="modal">Close</button>
                     </div>
                     <div class="collapse" id="skillRec">
                         <div class="card card-body" style="margin: 0 7px 5px 7px;">
@@ -296,7 +298,8 @@
                             aria-expanded="false" aria-controls="collapse">
                             Skills Acquired
                         </button>
-                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-danger" onclick="closeModal()"
+                            data-bs-dismiss="modal">Close</button>
                     </div>
 
                     <div class="collapse" id="skillRec">
@@ -400,7 +403,8 @@
                             aria-expanded="false" aria-controls="collapse">
                             Skills Acquired
                         </button>
-                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-danger" onclick="closeModal()"
+                            data-bs-dismiss="modal">Close</button>
                     </div>
 
                     <div class="collapse" id="skillRec">
@@ -524,7 +528,8 @@
                             aria-expanded="false" aria-controls="collapse">
                             Skills Acquired
                         </button>
-                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-danger" onclick="closeModal()"
+                            data-bs-dismiss="modal">Close</button>
                     </div>
 
                     <div class="collapse" id="skillRec">
@@ -664,7 +669,8 @@
                             aria-expanded="false" aria-controls="collapse">
                             Skills Acquired
                         </button>
-                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-danger" onclick="closeModal()"
+                            data-bs-dismiss="modal">Close</button>
                     </div>
 
                     <div class="collapse" id="skillRec">
@@ -734,23 +740,8 @@
         const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
         const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
     </script>
-    <script>
-        var myCollapse = new bootstrap.Collapse(document.getElementById('skillRec'), {
-            toggle: false
-        });
 
-        document.getElementById('skillAcq').addEventListener('show.bs.collapse', function () {
-            // Hide the other collapse when skillsAcquired is shown
-            myCollapse.hide();
-        });
-
-        document.getElementById('skillRec').addEventListener('show.bs.collapse', function () {
-            // Hide the other collapse when skillsRequired is shown
-            new bootstrap.Collapse(document.getElementById('skillAcq'), {
-                toggle: false
-            }).hide();
-        });
-    </script>
+    <script src="events.js"></script>
 
 </body>
 

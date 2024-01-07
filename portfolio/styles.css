@@ -39,8 +39,8 @@
 
 .JobTitle{
     display: flex;
-    background-color: #ffe9ee;
-    color: #023047;
+    background-color: #83c5be;
+    color: #006d77;
     border-radius: 1.25rem;
     height: 12rem;
     width: 12rem;   
@@ -48,15 +48,15 @@
     text-align: center;
     padding: 1rem;
     justify-content: center;
-    border-style: ridge;
+    /* border-style: ridge; */
 }
 
 .JobTitle:hover {
     transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-    background-color: #023047;
+    background-color: #006d77;
     transform: translate(0, -5px);
-    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.399);
-    color: #ffb5c2;
+    box-shadow: 10px 10px 10px #bcbcbc;
+    color: #edf6f9;
 }
 
 .icons{

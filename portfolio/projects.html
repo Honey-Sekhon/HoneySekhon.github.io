@@ -10,6 +10,8 @@
     <link href="https://unpkg.com/@popperjs/core@2">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <link rel="stylesheet" href="./styles.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 </head>
 
 <style>
@@ -102,7 +104,8 @@
                     </div>
 
                     <div class="modal-footer">
-                        <button type="button" button class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal"
+                            onclick="closeModal()">Close</button>
                         <button class="btn btn-primary" type="button" data-bs-toggle="collapse"
                             data-bs-target="#detailCollapsor" aria-expanded="false"
                             aria-controls="collapseWidthExample">
@@ -111,15 +114,12 @@
 
 
                         <div class="collapse " id="detailCollapsor">
-                            <button class="btn" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#detailButton1" aria-expanded="false"
-                                aria-controls="multiCollapseExample2">Skills Honed</button>
-                            <button class="btn" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#detailButton2" aria-expanded="false"
-                                aria-controls="multiCollapseExample2">Components</button>
-                            <button class="btn" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#detailButton3" aria-expanded="false"
-                                aria-controls="multiCollapseExample2">Dev Tools</button>
+                            <button class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#detailButton1"
+                                aria-expanded="false" aria-controls="multiCollapseExample2">Skills Honed</button>
+                            <button class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#detailButton2"
+                                aria-expanded="false" aria-controls="multiCollapseExample2">Components</button>
+                            <button class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#detailButton3"
+                                aria-expanded="false" aria-controls="multiCollapseExample2">Dev Tools</button>
                         </div>
 
                         <div class="collapse multi-collapse" id="detailButton1">
@@ -323,9 +323,8 @@
                     </div>
 
                     <div class="modal-footer">
-                        <button type="button" button class="btn btn-danger" data-bs-dismiss="modal">Close</button>
-
-
+                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal"
+                            onclick="closeModal()">Close</button>
                         <button class="btn btn-primary" type="button" data-bs-toggle="collapse"
                             data-bs-target="#detailCollapsor" aria-expanded="false"
                             aria-controls="collapseWidthExample">
@@ -334,15 +333,12 @@
 
 
                         <div class="collapse " id="detailCollapsor">
-                            <button class="btn" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#detailButton1" aria-expanded="false"
-                                aria-controls="multiCollapseExample2">Skills Honed</button>
-                            <button class="btn" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#detailButton2" aria-expanded="false"
-                                aria-controls="multiCollapseExample2">Components</button>
-                            <button class="btn" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#detailButton3" aria-expanded="false"
-                                aria-controls="multiCollapseExample2">Dev Tools</button>
+                            <button class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#detailButton1"
+                                aria-expanded="false" aria-controls="multiCollapseExample2">Skills Honed</button>
+                            <button class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#detailButton2"
+                                aria-expanded="false" aria-controls="multiCollapseExample2">Components</button>
+                            <button class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#detailButton3"
+                                aria-expanded="false" aria-controls="multiCollapseExample2">Dev Tools</button>
                         </div>
 
                         <div class="collapse multi-collapse" id="detailButton1">
@@ -490,6 +486,7 @@
                                 </div>
                             </div>
                         </div>
+
                     </div>
 
                 </div>
@@ -517,7 +514,8 @@
                             the ALSA API, with multi-threaded execution. </p>
 
                         <p> Beat-Box offers diverse drum beat modes, customizable sounds, and precise control over
-                            ProjectListo and volume parameters. Hardware components, including a joystick, LED matrix, and
+                            ProjectListo and volume parameters. Hardware components, including a joystick, LED matrix,
+                            and
                             buttons, enhance user interaction. The project prioritizes memory management and
                             Valgrind analysis for stability. </p>
 
@@ -528,7 +526,8 @@
                         </p>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" button class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal"
+                            onclick="closeModal()">Close</button>
 
 
                         <button class="btn btn-primary" type="button" data-bs-toggle="collapse"
@@ -539,15 +538,12 @@
 
 
                         <div class="collapse " id="detailCollapsor">
-                            <button class="btn" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#detailButton1" aria-expanded="false"
-                                aria-controls="multiCollapseExample2">Skills Honed</button>
-                            <button class="btn" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#detailButton2" aria-expanded="false"
-                                aria-controls="multiCollapseExample2">Components</button>
-                            <button class="btn" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#detailButton3" aria-expanded="false"
-                                aria-controls="multiCollapseExample2">Dev Tools</button>
+                            <button class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#detailButton1"
+                                aria-expanded="false" aria-controls="multiCollapseExample2">Skills Honed</button>
+                            <button class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#detailButton2"
+                                aria-expanded="false" aria-controls="multiCollapseExample2">Components</button>
+                            <button class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#detailButton3"
+                                aria-expanded="false" aria-controls="multiCollapseExample2">Dev Tools</button>
                         </div>
 
                         <div class="collapse multi-collapse" id="detailButton1">
@@ -656,8 +652,8 @@
                                 <div class="container text-center">
                                     <div class="row" id="components">
                                         <div class="col-sm">
-                                            <a href="https://www.adafruit.com/product/872" style="width: 100%; height: 100%;"
-                                                target="_blank">
+                                            <a href="https://www.adafruit.com/product/872"
+                                                style="width: 100%; height: 100%;" target="_blank">
                                                 8*8 LED matrix</a>
                                         </div>
                                         <div class="col-sm">
@@ -746,7 +742,8 @@
                         </p>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" button class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal"
+                            onclick="closeModal()">Close</button>
 
 
                         <button class="btn btn-primary" type="button" data-bs-toggle="collapse"
@@ -757,15 +754,12 @@
 
 
                         <div class="collapse " id="detailCollapsor">
-                            <button class="btn" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#detailButton1" aria-expanded="false"
-                                aria-controls="multiCollapseExample2">Skills Honed</button>
-                            <button class="btn" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#detailButton2" aria-expanded="false"
-                                aria-controls="multiCollapseExample2">Components</button>
-                            <button class="btn" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#detailButton3" aria-expanded="false"
-                                aria-controls="multiCollapseExample2">Dev Tools</button>
+                            <button class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#detailButton1"
+                                aria-expanded="false" aria-controls="multiCollapseExample2">Skills Honed</button>
+                            <button class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#detailButton2"
+                                aria-expanded="false" aria-controls="multiCollapseExample2">Components</button>
+                            <button class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#detailButton3"
+                                aria-expanded="false" aria-controls="multiCollapseExample2">Dev Tools</button>
                         </div>
 
                         <div class="collapse multi-collapse" id="detailButton1">
@@ -955,7 +949,8 @@
                     </div>
 
                     <div class="modal-footer">
-                        <button type="button" button class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal"
+                            onclick="closeModal()">Close</button>
 
 
                         <button class="btn btn-primary" type="button" data-bs-toggle="collapse"
@@ -965,16 +960,13 @@
                         </button>
 
 
-                        <div class="collapse " id="detailCollapsor">
-                            <button class="btn" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#detailButton1" aria-expanded="false"
-                                aria-controls="multiCollapseExample2">Skills Honed</button>
-                            <button class="btn" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#detailButton2" aria-expanded="false"
-                                aria-controls="multiCollapseExample2">Components</button>
-                            <button class="btn" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#detailButton3" aria-expanded="false"
-                                aria-controls="multiCollapseExample2">Dev Tools</button>
+                        <div class="collapse" id="detailCollapsor">
+                            <button class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#detailButton1"
+                                aria-expanded="false" aria-controls="multiCollapseExample2">Skills Honed</button>
+                            <button class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#detailButton2"
+                                aria-expanded="false" aria-controls="multiCollapseExample2">Components</button>
+                            <button class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#detailButton3"
+                                aria-expanded="false" aria-controls="multiCollapseExample2">Dev Tools</button>
                         </div>
 
                         <div class="collapse multi-collapse" id="detailButton1">
@@ -1179,7 +1171,8 @@
                     </div>
 
                     <div class="modal-footer">
-                        <button type="button" button class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal"
+                            onclick="closeModal()">Close</button>
 
 
                         <button class="btn btn-primary" type="button" data-bs-toggle="collapse"
@@ -1190,15 +1183,12 @@
 
 
                         <div class="collapse " id="detailCollapsor">
-                            <button class="btn" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#detailButton1" aria-expanded="false"
-                                aria-controls="multiCollapseExample2">Skills Honed</button>
-                            <button class="btn" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#detailButton2" aria-expanded="false"
-                                aria-controls="multiCollapseExample2">Components</button>
-                            <button class="btn" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#detailButton3" aria-expanded="false"
-                                aria-controls="multiCollapseExample2">Dev Tools</button>
+                            <button class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#detailButton1"
+                                aria-expanded="false" aria-controls="multiCollapseExample2">Skills Honed</button>
+                            <button class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#detailButton2"
+                                aria-expanded="false" aria-controls="multiCollapseExample2">Components</button>
+                            <button class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#detailButton3"
+                                aria-expanded="false" aria-controls="multiCollapseExample2">Dev Tools</button>
                         </div>
 
                         <div class="collapse multi-collapse" id="detailButton1">
@@ -1359,7 +1349,8 @@
                     </div>
 
                     <div class="modal-footer">
-                        <button type="button" button class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal"
+                            onclick="closeModal()">Close</button>
 
                         <button class="btn btn-primary" type="button" data-bs-toggle="collapse"
                             data-bs-target="#detailCollapsor" aria-expanded="false"
@@ -1369,13 +1360,11 @@
 
 
                         <div class="collapse " id="detailCollapsor">
-                            <button class="btn" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#detailButton1" aria-expanded="false"
-                                aria-controls="multiCollapseExample2">Skills Honed</button>
+                            <button class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#detailButton1"
+                                aria-expanded="false" aria-controls="multiCollapseExample2">Skills Honed</button>
 
-                            <button class="btn" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#detailButton3" aria-expanded="false"
-                                aria-controls="multiCollapseExample2">Dev Tools</button>
+                            <button class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#detailButton3"
+                                aria-expanded="false" aria-controls="multiCollapseExample2">Dev Tools</button>
                         </div>
 
                         <div class="collapse multi-collapse" id="detailButton1">
@@ -1496,16 +1485,15 @@
                     </div>
 
                     <div class="modal-footer">
-                        <button type="button" button class="btn btn-danger" data-bs-dismiss="modal">Close</button>
-                        <button class="btn" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#detailCollapsor" aria-expanded="false"
-                            aria-controls="multiCollapseExample2" style="background-color: #eddcd2;
+                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal"
+                            onclick="closeModal()">Close</button>
+                        <button class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#detailCollapsor"
+                            aria-expanded="false" aria-controls="multiCollapseExample2" style="background-color: #eddcd2;
                             border-color: #42273b;
                             border-radius: 0.8rem;
                             border-style: solid;
                             border-width: 2px;
-                            align-content: center;">Dev
-                            Tools<i class="bi bi-forward-fill"></i></button>
+                            align-content: center;">Dev Tools<i class="bi bi-forward-fill"></i></button>
                     </div>
 
                     <div class="collapse multi-collapse" id="detailCollapsor">
@@ -1568,7 +1556,7 @@
                     </div>
 
                     <div class="modal-footer">
-                        <button type="button" button class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal" onclick="closeModal()">Close</button>
                         <button type="button" class="btn btn-primary">Details <i
                                 class="bi bi-forward-fill"></i></button>
                     </div>
@@ -1584,6 +1572,7 @@
         const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
         const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
     </script>
+    <script src="events.js"></script>
 </body>
 
 </html>
